@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Devops,Docker,Centos7,kubernetes,k8s,">
+  <meta name="keywords" content="Devops,Docker,Centos7,kubernetes,">
 
 
 
@@ -82,14 +82,14 @@
 
 
 <meta name="description" content="官方地址：https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/ https://kubernetes.io/docs/setup/independent/troubleshooting-kubeadm/ 实验架构：lab1: master 11.11.11.111lab2: node 11.11.11.112lab">
-<meta name="keywords" content="Devops,Docker,Centos7,kubernetes,k8s">
+<meta name="keywords" content="Devops,Docker,Centos7,kubernetes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos7使用kubeadm安装k8s-1.11版本">
 <meta property="og:url" content="https://amote.xin/2018/12/14/centos7使用kubeadm安装k8s-1-11版本/index.html">
 <meta property="og:site_name" content="Amote">
 <meta property="og:description" content="官方地址：https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/ https://kubernetes.io/docs/setup/independent/troubleshooting-kubeadm/ 实验架构：lab1: master 11.11.11.111lab2: node 11.11.11.112lab">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-14T10:22:30.558Z">
+<meta property="og:updated_time" content="2018-12-14T10:24:46.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos7使用kubeadm安装k8s-1.11版本">
 <meta name="twitter:description" content="官方地址：https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/ https://kubernetes.io/docs/setup/independent/troubleshooting-kubeadm/ 实验架构：lab1: master 11.11.11.111lab2: node 11.11.11.112lab">
@@ -358,7 +358,7 @@
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
                   <a href="/categories/kubernetes/" itemprop="url" rel="index">
-                    <span itemprop="name">-kubernetes</span>
+                    <span itemprop="name">kubernetes</span>
                   </a>
                 </span>
 
@@ -443,16 +443,8 @@
 <p>修改配置<br>此处的ip配置要与上面kubeadm的pod-network一致<br>  net-conf.json: |<br>​    {<br>​      “Network”: “10.244.0.0/16”,<br>​      “Backend”: {<br>​        “Type”: “vxlan”<br>​      }<br>​    }</p>
 <p>修改镜像<br>image: registry.cn-shanghai.aliyuncs.com/gcr-k8s/flannel:v0.10.0-amd64</p>
 <p>docker registry.cn-shanghai.aliyuncs.com/gcr-k8s/flannel:v0.10.0-amd64 quay.io/coreos/flannel:v0.10.0-amd64</p>
-<p>如果Node有多个网卡的话，参考flannel issues 39701，<br><a href="https://github.com/kubernetes/kubernetes/issues/39701" target="_blank" rel="noopener">https://github.com/kubernetes/kubernetes/issues/39701</a><br>目前需要在kube-flannel.yml中使用–iface参数指定集群主机内网网卡的名称，<br>否则可能会出现dns无法解析。容器无法通信的情况，需要将kube-flannel.yml下载到本地，<br>flanneld启动参数加上–iface=<iface-name><br>    containers:</iface-name></p>
-<pre><code>- name: kube-flannel
-  image: registry.cn-shanghai.aliyuncs.com/gcr-k8s/flannel:v0.10.0-amd64
-  command:
-  - /opt/bin/flanneld
-  args:
-  - --ip-masq
-  - --kube-subnet-mgr
-  - --iface=eth1
-</code></pre><p>启动<br>kubectl apply -f kube-flannel.yml</p>
+<p>如果Node有多个网卡的话，参考flannel issues 39701，<br><a href="https://github.com/kubernetes/kubernetes/issues/39701" target="_blank" rel="noopener">https://github.com/kubernetes/kubernetes/issues/39701</a><br>目前需要在kube-flannel.yml中使用–iface参数指定集群主机内网网卡的名称，<br>否则可能会出现dns无法解析。容器无法通信的情况，需要将kube-flannel.yml下载到本地，<br>flanneld启动参数加上–iface=<iface-name><br>​    containers:<br>​      - name: kube-flannel<br>​        image: registry.cn-shanghai.aliyuncs.com/gcr-k8s/flannel:v0.10.0-amd64<br>​        command:<br>​        - /opt/bin/flanneld<br>​        args:<br>​        - –ip-masq<br>​        - –kube-subnet-mgr<br>​        - –iface=eth1</iface-name></p>
+<p>启动<br>kubectl apply -f kube-flannel.yml</p>
 <p>查看<br>kubectl get pods –namespace kube-system<br>kubectl get svc –namespace kube-system</p>
 <h1 id="如下操作在Node节点操作"><a href="#如下操作在Node节点操作" class="headerlink" title="如下操作在Node节点操作"></a>如下操作在Node节点操作</h1><h2 id="配置node节点加入集群"><a href="#配置node节点加入集群" class="headerlink" title="配置node节点加入集群"></a>配置node节点加入集群</h2><p>此命令为初始化master成功后返回的结果<br>kubeadm join 11.11.11.111:6443 –token ocj4qp.qzshbzjpv095e418 –discovery-token-ca-cert-hash sha256:9ea06d48a41289b538aadb2103bbe794b3d2cb70740e522bd97ac6ef129e11e6</p>
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>kubectl run nginx –replicas=2 –image=nginx:alpine –port=80<br>kubectl expose deployment nginx –type=NodePort –name=example-service-nodeport<br>kubectl expose deployment nginx –name=example-service</p>
@@ -572,8 +564,6 @@
             <a href="/tags/Centos7/" rel="tag"># Centos7</a>
           
             <a href="/tags/kubernetes/" rel="tag"># kubernetes</a>
-          
-            <a href="/tags/k8s/" rel="tag"># k8s</a>
           
         </div>
       
@@ -738,7 +728,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

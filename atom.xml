@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2018-12-14T08:42:32.655Z</updated>
+  <updated>2018-12-14T08:49:09.656Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -21,16 +21,22 @@
     <link href="https://amote.xin/2018/12/14/centos7%E6%90%AD%E5%BB%BAdocker%E7%A7%81%E6%9C%89%E9%95%9C%E5%83%8F%E4%B8%AD%E5%BF%83/"/>
     <id>https://amote.xin/2018/12/14/centos7搭建docker私有镜像中心/</id>
     <published>2018-12-14T08:39:56.000Z</published>
-    <updated>2018-12-14T08:42:32.655Z</updated>
+    <updated>2018-12-14T08:49:09.656Z</updated>
     
     <summary type="html">
     
     </summary>
     
-      <category term="[object Object]" scheme="https://amote.xin/categories/object-Object/"/>
+      <category term="Docker" scheme="https://amote.xin/categories/Docker/"/>
     
     
-      <category term="[object Object]" scheme="https://amote.xin/tags/object-Object/"/>
+      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
+    
+      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
+    
+      <category term="Register" scheme="https://amote.xin/tags/Register/"/>
+    
+      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
   </entry>
   

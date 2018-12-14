@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2018-12-14T10:49:21.205Z</updated>
+  <updated>2018-12-14T10:49:15.605Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>centos7使用kubeadm安装k8s-1.11版本多主高可用</title>
-    <link href="https://amote.xin/2018/12/14/centos7%E4%BD%BF%E7%94%A8kubeadm%E5%AE%89%E8%A3%85k8s-1-11%E7%89%88%E6%9C%AC%E5%A4%9A%E4%B8%BB%E9%AB%98%E5%8F%AF%E7%94%A8-1/"/>
-    <id>https://amote.xin/2018/12/14/centos7使用kubeadm安装k8s-1-11版本多主高可用-1/</id>
-    <published>2018-12-14T10:49:21.000Z</published>
-    <updated>2018-12-14T10:49:21.205Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>centos7使用kubeadm安装k8s-1.11版本多主高可用</title>

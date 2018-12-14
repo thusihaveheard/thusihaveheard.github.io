@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2018-12-14T03:18:06.729Z</updated>
+  <updated>2018-12-14T08:42:32.655Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos7搭建docker私有镜像中心</title>
+    <link href="https://amote.xin/2018/12/14/centos7%E6%90%AD%E5%BB%BAdocker%E7%A7%81%E6%9C%89%E9%95%9C%E5%83%8F%E4%B8%AD%E5%BF%83/"/>
+    <id>https://amote.xin/2018/12/14/centos7搭建docker私有镜像中心/</id>
+    <published>2018-12-14T08:39:56.000Z</published>
+    <updated>2018-12-14T08:42:32.655Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="[object Object]" scheme="https://amote.xin/categories/object-Object/"/>
+    
+    
+      <category term="[object Object]" scheme="https://amote.xin/tags/object-Object/"/>
+    
+  </entry>
   
   <entry>
     <title>Devops搭建手冊</title>

@@ -420,7 +420,11 @@
           Gitlab安装安装命令dpkg --force-depends -i gitlab-ce_10.3.3-ce.0_amd64.deb
 备份/etc/gitlab/gitlab.rb文件cp gitlab.rb gitlab.rb.bak
 修改/etc/gitlab/gitlab.rb文件external_url &quot;http://gitlab.example.com&quot; 为 external_url &quot;http://ip地址&quot;
-使修改生效sudo gitla
+使修改生效sudo gitlab-ctl reconfigure
+默认root账号，需添加密码访问urlip:端口号(默认80)
+Nexus安装创建文件夹cd /usr/localmkdir nexus
+下载Nexus安装包，并解压文件wget https://sonatype-download.global.ssl.fastly.net/nexus/oss/nexus-2.14.8-01-bundle.tar.gztar -xzvf nexus-2.14.8-01-bundle.tar.gz -C nexus
+添加root
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -718,8 +722,15 @@
           
           Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
 Quick StartCreate a new post1$ hexo new "My New Post"
-M
-          ...
+More info: Writing
+Run server1$ hexo server
+More info: Server
+Generate static files1$ hexo generate
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+More info: Deployment
+
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/13/hello-world/#more" rel="contents">

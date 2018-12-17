@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="kubernetes,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="世界有多浮躁，我心就有多安静">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Amote">
-<meta property="og:url" content="https://amote.xin/tags/歌/index.html">
+<meta name="description" content="Ingress其实就是从kuberenets集群外部访问集群的一个入口，将外部的请求转发到集群内不同的Service 上，其实就相当于nginx、apache 等负载均衡代理服务器，再加上一个规则定义，路由信息的刷新需要靠Ingress controller来提供。Ingress controller可以理解为一个监听器，通过不断地与kube-apiserver打交道，实时的感知后端service">
+<meta name="keywords" content="kubernetes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装Ingress">
+<meta property="og:url" content="https://amote.xin/2018/12/17/安装Ingress/index.html">
 <meta property="og:site_name" content="Amote">
-<meta property="og:description" content="世界有多浮躁，我心就有多安静">
+<meta property="og:description" content="Ingress其实就是从kuberenets集群外部访问集群的一个入口，将外部的请求转发到集群内不同的Service 上，其实就相当于nginx、apache 等负载均衡代理服务器，再加上一个规则定义，路由信息的刷新需要靠Ingress controller来提供。Ingress controller可以理解为一个监听器，通过不断地与kube-apiserver打交道，实时的感知后端service">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-17T06:49:20.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Amote">
-<meta name="twitter:description" content="世界有多浮躁，我心就有多安静">
+<meta name="twitter:title" content="安装Ingress">
+<meta name="twitter:description" content="Ingress其实就是从kuberenets集群外部访问集群的一个入口，将外部的请求转发到集群内不同的Service 上，其实就相当于nginx、apache 等负载均衡代理服务器，再加上一个规则定义，路由信息的刷新需要靠Ingress controller来提供。Ingress controller可以理解为一个监听器，通过不断地与kube-apiserver打交道，实时的感知后端service">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://amote.xin/tags/歌/">
+  <link rel="canonical" href="https://amote.xin/2018/12/17/安装Ingress/">
 
 
 
 
 
-  <title>标签: 歌 | Amote</title>
+  <title>安装Ingress | Amote</title>
   
 
 
@@ -145,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	
 	<a href="https://github.com/thusihaveheard" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -289,78 +291,273 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>歌<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/17/安装Ingress/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="如是我闻">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amote">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/12/14/心若水/" itemprop="url">
-              
-                <span itemprop="name">心若水</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">安装Ingress</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-14T19:39:09+08:00" content="2018-12-14">
-          12-14
-        </time>
-      </div>
+        <div class="post-meta">
+		  
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-17T14:40:29+08:00">
+                2018-12-17
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/kubernetes/" itemprop="url" rel="index">
+                    <span itemprop="name">kubernetes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/17/安装Ingress/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/17/安装Ingress/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/17/安装Ingress/" class="leancloud_visitors" data-flag-title="安装Ingress">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/14/望穿秋水/" itemprop="url">
-              
-                <span itemprop="name">望穿秋水</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-14T19:34:49+08:00" content="2018-12-14">
-          12-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <p>Ingress其实就是从kuberenets集群外部访问集群的一个入口，将外部的请求转发到集群内不同的Service 上，其实就相当于nginx、apache 等负载均衡代理服务器，再加上一个规则定义，路由信息的刷新需要靠Ingress controller来提供。<br>Ingress controller可以理解为一个监听器，通过不断地与kube-apiserver打交道，实时的感知后端service、pod 等的变化，当得到这些变化信息后，Ingress controller再结合Ingress的配置，更新反向代理负载均衡器，达到服务发现的作用。其实这点和服务发现工具consul的consul-template非常类似。<br># 创建rbac<br># 创建文件：ingress-rbac.yaml，用于service account验证</p>
+<p>apiVersion: v1<br>kind: ServiceAccount<br>metadata:<br>  name: ingress<br>  namespace: kube-system<br>  -–<br>kind: ClusterRoleBinding<br>apiVersion: rbac.authorization.k8s.io/v1beta1<br>metadata:<br>  name: ingress<br>subjects:</p>
+<ul>
+<li>kind: ServiceAccount<br>name: ingress<br>namespace: kube-system<br>roleRef:<br>kind: ClusterRole<br>name: cluster-admin<br>apiGroup: rbac.authorization.k8s.io</li>
+</ul>
+<p># DaemonSet 形式部署traefik<br># 创建文件：traefik-daemonset.yaml，为保证traefik 总能提供服务，在每个节点上都部署一个traefik，所以这里使用DaemonSet 的形式</p>
+<p>kind: ConfigMap<br>apiVersion: v1<br>metadata:<br>  name: traefik-conf<br>  namespace: kube-system<br>data:<br>  traefik-config: |-<br>​    defaultEntryPoints = [“http”,”https”]<br>​    [entryPoints]<br>​      [entryPoints.http]<br>​      address = “:80”<br>​        [entryPoints.http.redirect]<br>​          entryPoint = “https”<br>​      [entryPoints.https]<br>​      address = “:443”<br>​        [entryPoints.https.tls]<br>​          [[entryPoints.https.tls.certificates]]<br>​          CertFile = “/ssl/ssl.crt”<br>​          KeyFile = “/ssl/ssl.key”</p>
+<hr>
+<p>kind: DaemonSet<br>apiVersion: extensions/v1beta1<br>metadata:<br>  name: traefik-ingress<br>  namespace: kube-system<br>  labels:<br>​    k8s-app: traefik-ingress<br>spec:<br>  template:<br>​    metadata:<br>​      labels:<br>​        k8s-app: traefik-ingress<br>​        name: traefik-ingress<br>​    spec:<br>​      terminationGracePeriodSeconds: 60<br>​      restartPolicy: Always<br>​      serviceAccountName: ingress<br>​      containers:<br>​      - image: traefik:latest<br>​        name: traefik-ingress<br>​        ports:<br>​        - name: http<br>​          containerPort: 80<br>​          hostPort: 80<br>​        - name: https<br>​          containerPort: 443<br>​          hostPort: 443<br>​        - name: admin<br>​          containerPort: 8080<br>​        args:<br>​        - –configFile=/etc/traefik/traefik.toml<br>​        - -d<br>​        - –web<br>​        - –kubernetes<br>​        - –logLevel=DEBUG<br>​        volumeMounts:<br>​        - name: traefik-config-volume<br>​          mountPath: /etc/traefik<br>​        - name: traefik-ssl-volume<br>​          mountPath: /ssl<br>​      volumes:<br>​      - name: traefik-config-volume<br>​        configMap:<br>​          name: traefik-conf<br>​          items:<br>​          - key: traefik-config<br>​            path: traefik.toml<br>​      - name: traefik-ssl-volume<br>​        secret:<br>​          secretName: traefik-ssl<br>上面的yaml 文件中我们添加了一个名为traefik-conf的ConfigMap，该配置是用来将http 请求强制跳转成https，并指定https 所需CA 文件地址，这里我们使用secret的形式来指定CA 文件的路径：</p>
+<p>OpenSSL生成CA证书<br>[root@lab1 /]# mkdir ssl<br>[root@lab1 /]# cd ssl/<br>[root@lab1 ssl]# openssl req -newkey rsa:2048 -nodes -keyout ssl.key -x509 -days 3650 -out ssl.crt<br>Generating a 2048 bit RSA private key<br>…………………………………………+++<br>…………………………..+++<br>writing new private key to ‘ssl.key’<br>-—-<br>You are about to be asked to enter information that will be incorporated<br>into your certificate request.<br>What you are about to enter is what is called a Distinguished Name or a DN.<br>There are quite a few fields but you can leave some blank<br>For some fields there will be a default value,<br>If you enter ‘.’, the field will be left blank.<br>-—-<br>Country Name (2 letter code) [XX]:CN<br>State or Province Name (full name) []:BJ<br>Locality Name (eg, city) [Default City]:BJ<br>Organization Name (eg, company) [Default Company Ltd]:TRT<br>Organizational Unit Name (eg, section) []:OPS<br>Common Name (eg, your name or your server’s hostname) []:CA.test.com<br>Email Address []:<a href="mailto:shuaichao_gao@trtjk.com" target="_blank" rel="noopener">shuaichao_gao@trtjk.com</a><br>[root@lab1 ssl]# ls -l<br>total 8<br>-rw-r–r–. 1 root root 1391 Aug  3 13:16 ssl.crt<br>-rw-r–r–. 1 root root 1700 Aug  3 13:16 ssl.key</p>
+<p>$ ls<br>ssl.crt     ssl.key<br>$ kubectl create secret generic traefik-ssl –from-file=ssl.crt –from-file=ssl.key –namespace=kube-system<br>secret “traefik-ssl” created<br># 创建ingress<br># 创建文件：traefik-ingress.yaml，现在可以通过创建ingress文件来定义请求规则了，根据自己集群中的service 自己修改相应的serviceName 和servicePort</p>
+<p>apiVersion: extensions/v1beta1<br>kind: Ingress<br>metadata:<br>  name: traefik-ingress<br>spec:<br>  rules:</p>
+<ul>
+<li>host: traefik.nginx.io<br>http:<br>  paths:<ul>
+<li>path: /<br>backend:<br>  serviceName: my-nginx<br>  servicePort: 80<br>$ kubectl create -f ingress-rbac.yaml<br>serviceaccount “ingress” created<br>clusterrolebinding “ingress” created<br>$ kubectl create -f traefik-daemonset.yaml<br>configmap “traefik-conf” created<br>daemonset “traefik-ingress” created<br>$ kubectl create -f traefik-ingress.yaml<br>ingress “traefik-ingress” created<br># Traefik UI<br># 创建文件：traefik-ui.yaml</li>
+</ul>
+</li>
+</ul>
+<p>apiVersion: v1<br>kind: Service<br>metadata:<br>  name: traefik-ui<br>  namespace: kube-system<br>spec:<br>  selector:<br>​    k8s-app: traefik-ingress<br>  ports:</p>
+<ul>
+<li><p>name: web<br>port: 80<br>targetPort: 8080<br>-–<br>apiVersion: extensions/v1beta1<br>kind: Ingress<br>metadata:<br>name: traefik-ui<br>namespace: kube-system<br>spec:<br>rules:</p>
+</li>
+<li><p>host: traefik-ui.local<br>http:<br>  paths:</p>
+<ul>
+<li>path: /<br>backend:<br>  serviceName: traefik-ui<br>  servicePort: web<br># 部署完成后，在本地/etc/hosts添加一条配置</li>
+</ul>
+</li>
+</ul>
+<p># 将下面的xx.xx.xx.xx替换成任意节点IP<br>xx.xx.xx.xx master03 traefik.nginx.io traefik-ui.local</p>
+<p># 配置完成后，在本地访问：traefik-ui.local，则可以访问到traefik的dashboard页面<br># 同样的可以访问traefik.nginx.io，得到正确的结果页面</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/kubernetes/" rel="tag"># kubernetes</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/14/浮生如茶/" rel="next" title="浮生如茶">
+                <i class="fa fa-chevron-left"></i> 浮生如茶
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -368,6 +565,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -625,6 +829,10 @@ setInterval("createtime()",250);
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

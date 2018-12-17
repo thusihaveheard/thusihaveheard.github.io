@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2018-12-17T06:49:20.413Z</updated>
+  <updated>2018-12-17T07:55:04.746Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker搭建mysql数据库</title>
+    <link href="https://amote.xin/2018/12/17/Docker%E6%90%AD%E5%BB%BAmysql%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>https://amote.xin/2018/12/17/Docker搭建mysql数据库/</id>
+    <published>2018-12-17T07:47:34.000Z</published>
+    <updated>2018-12-17T07:55:04.746Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h1><p><font color="#FF0000"> 演示的是5.7.24版本 </font><br>docker pull mysql:5.7.24<br> <img src="/2018/12/17/Docker搭建mysql数据库/1.png"></p><h1 id="启动镜像"><a href="#启动镜像" class="headerlink" title="启动镜像"></a>启动镜像</h1><p>docker run –name mysql5.7.24 -p 3306:3306 -d –restart always -v /volume_data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1qaz2wsx! mysql:5.7.24<br>–name是容器别名，-p对外暴露端口，-d 后台执行挂了自动重启，-v 对外挂在目录，将mysql数据持久化到本地，-e MYSQL_ROOT_PASSWORD通过变量设置root账号的密码，最后是镜像名称。启动成功后可以在外部直接访问到数据库</p> <img src="/2018/12/17/Docker搭建mysql数据库/2.png">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;拉取镜像&quot;&gt;&lt;a href=&quot;#拉取镜像&quot; class=&quot;headerlink&quot; title=&quot;拉取镜像&quot;&gt;&lt;/a&gt;拉取镜像&lt;/h1&gt;&lt;p&gt;&lt;font color=&quot;#FF0000&quot;&gt; 演示的是5.7.24版本 &lt;/font&gt;&lt;br&gt;docker pull mys
+      
+    
+    </summary>
+    
+      <category term="Docker-mysql" scheme="https://amote.xin/categories/Docker-mysql/"/>
+    
+    
+      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
+    
+      <category term="Mysql" scheme="https://amote.xin/tags/Mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>安装Ingress</title>
@@ -256,9 +283,9 @@
       <category term="kubernetes" scheme="https://amote.xin/categories/kubernetes/"/>
     
     
-      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
-    
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
+    
+      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
       <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
@@ -287,9 +314,9 @@
       <category term="kubernetes" scheme="https://amote.xin/categories/kubernetes/"/>
     
     
-      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
-    
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
+    
+      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
       <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
@@ -318,9 +345,9 @@
       <category term="Docker" scheme="https://amote.xin/categories/Docker/"/>
     
     
-      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
-    
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
+    
+      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
       <category term="Register" scheme="https://amote.xin/tags/Register/"/>
     

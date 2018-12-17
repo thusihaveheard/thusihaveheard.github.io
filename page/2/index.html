@@ -304,6 +304,179 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/14/centos7使用kubeadm安装k8s-1-11版本多主高可用/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="如是我闻">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amote">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/14/centos7使用kubeadm安装k8s-1-11版本多主高可用/" itemprop="url">centos7使用kubeadm安装k8s-1.11版本多主高可用</a></h1>
+        
+
+        <div class="post-meta">
+		  
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-14T18:27:26+08:00">
+                2018-12-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/kubernetes/" itemprop="url" rel="index">
+                    <span itemprop="name">kubernetes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/14/centos7使用kubeadm安装k8s-1-11版本多主高可用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/14/centos7使用kubeadm安装k8s-1-11版本多主高可用/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/14/centos7使用kubeadm安装k8s-1-11版本多主高可用/" class="leancloud_visitors" data-flag-title="centos7使用kubeadm安装k8s-1.11版本多主高可用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          实验环境说明实验架构图lab1: etcd master haproxy keepalived 11.11.11.111lab2: etcd master haproxy keepalived 11.11.11.112lab3: etcd master haproxy keepalived 11.11.11.113lab4: node  11.11.11.114lab5: node  11.11.11.115lab6: node  11.11.11.116
+vip(loadblancer ip): 11.11.11.110复制代码实验使用的Vagrantfile# -- mode: ruby --# vi: set ft=ruby :
+ENV[“LC_ALL”] = “en_US.UTF-8”
+Vagrant.configure(“2”) do |config|​    (1..6).each do |i|​      config.vm.define “lab#{i}” do |node|​        node.vm.box = “centos-7.4-docker-17”​  
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/14/centos7使用kubeadm安装k8s-1-11版本多主高可用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/14/centos7使用kubeadm安装k8s-1-11版本/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -515,7 +688,7 @@ https://kubernetes.io/docs/setup/independent/troubleshooting-kubeadm/
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -526,7 +699,7 @@ https://kubernetes.io/docs/setup/independent/troubleshooting-kubeadm/
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -537,7 +710,7 @@ https://kubernetes.io/docs/setup/independent/troubleshooting-kubeadm/
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

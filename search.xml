@@ -5,7 +5,8 @@
     <url>%2F2018%2F12%2F17%2FDocker%E6%90%AD%E5%BB%BAmysql%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
     <content type="text"><![CDATA[拉取镜像 演示的是5.7.24版本 docker pull mysql:5.7.24 启动镜像docker run –name mysql5.7.24 -p 3306:3306 -d –restart always -v /volume_data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1qaz2wsx! mysql:5.7.24–name是容器别名，-p对外暴露端口，-d 后台执行挂了自动重启，-v 对外挂在目录，将mysql数据持久化到本地，-e MYSQL_ROOT_PASSWORD通过变量设置root账号的密码，最后是镜像名称。启动成功后可以在外部直接访问到数据库]]></content>
       <categories>
-        <category>Docker-mysql</category>
+        <category>Docker</category>
+        <category>mysql</category>
       </categories>
       <tags>
         <tag>Docker</tag>

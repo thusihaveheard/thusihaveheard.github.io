@@ -96,7 +96,7 @@
 <meta property="og:image" content="https://amote.xin/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/6.png">
 <meta property="og:image" content="https://amote.xin/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/7.png">
 <meta property="og:image" content="https://amote.xin/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/8.png">
-<meta property="og:updated_time" content="2018-12-18T02:20:20.359Z">
+<meta property="og:updated_time" content="2018-12-18T02:24:55.598Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile">
 <meta name="twitter:description" content="为何要修改官方的Dockerfile？官方的Dockerfile基于jenkins用户,修改后基于root用户,当然这个可以根据自己的需要去做修改，具体可以查看官方Dockerfile文件的注释！Jenkins插件为王，不安装插件基本jenkins就报废。使用官方的Jenkins镜像在启动成功之后访问jenkins会提示安装必要的插件，当然可以略过，进去jenkins之后再选择需要的插件进行安装，">
@@ -439,10 +439,7 @@
 <h1 id="如何制作plugins-txt"><a href="#如何制作plugins-txt" class="headerlink" title="如何制作plugins.txt"></a>如何制作plugins.txt</h1><p>方法一：1.安装jenkins<br>2.安装需要的插件<br>3.导入已安装的插件到plugins.txt<br>curl -sSL “<a href="http://username:password@myhost.com:port/pluginManager/api/xml?depth=1&amp;xpath=/*/*/shortName|/*/*/version&amp;wrapper=plugins&quot;" target="_blank" rel="noopener">http://username:password@myhost.com:port/pluginManager/api/xml?depth=1&amp;xpath=/*/*/shortName|/*/*/version&amp;wrapper=plugins&quot;</a> | perl -pe ‘s/.<em>?<shortname>([\w-]+).</shortname></em>?<version>([^&lt;]+)()(&lt;\/\w+&gt;)+/\1 \2\n/g’|sed ‘s/ /:/‘ &gt; plugins.txt</version></p>
 <p>方法二：1.创建空的plugins.txt<br>        2.打开plugins.txt文件，并填写插件名称，以及对应版本号<br> </p>
 <p><font color="#FF0000">建议使用方法一！</font></p>
-<h1 id="所需资源下载"><a href="#所需资源下载" class="headerlink" title="所需资源下载"></a>所需资源下载</h1><div style="color:#FF0000"><a href="jenkins.zip">相关资源</a></div>
-
-
-
+<h1 id="所需资源下载"><a href="#所需资源下载" class="headerlink" title="所需资源下载"></a>所需资源下载</h1><p><a href="jenkins.zip" style="color:#FF0000">相关资源</a></p>
 
       
     </div>

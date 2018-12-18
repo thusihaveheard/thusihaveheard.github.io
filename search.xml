@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile]]></title>
+    <url>%2F2018%2F12%2F18%2F%E5%9F%BA%E4%BA%8Ejenkins%E5%AE%98%E6%96%B9%E7%9A%84Dockerfile%E4%BF%AE%E6%94%B9%E4%B9%8B%E5%90%8E%E9%A2%84%E8%A3%85%E9%95%9C%E5%83%8F%E7%9A%84Dockerfile%2F</url>
+    <content type="text"><![CDATA[为何要修改官方的Dockerfile？官方的Dockerfile基于jenkins用户,修改后基于root用户,当然这个可以根据自己的需要去做修改，具体可以查看官方Dockerfile文件的注释！Jenkins插件为王，不安装插件基本jenkins就报废。使用官方的Jenkins镜像在启动成功之后访问jenkins会提示安装必要的插件，当然可以略过，进去jenkins之后再选择需要的插件进行安装，但是毕竟插件仓库都在国外，网络不好或者网络限制会造成插件安装失败(我们公司就是！)。基于此,在官方Dockerfile的基础上制作jenkins镜像的时候，可以直接去预装插件！ 注：官方Dockerfile地址 https://github.com/jenkinsci/docker/blob/587b2856cd225bb152c4abeeaaa24934c75aa460/Dockerfile 制作jenkins镜像docker build -t jenkins:2.60.3 . 注：默认Dockerfile使用的是2.60.3版本jenkins的war包，如果要改变使用的jenkins版本，在build的镜像通过参数–build-arg JENKINS_VERSION =版本号 传递如：docker build -t jenkins:2.60.3 –build-arg JENKINS_VERSION = 2.99 .但是不同的jenkins版本基于的jdk版本不一样，Dockerfile的基类镜像是openjdk8的 启动jenkins镜像docker run –d -p 8088:8080 -p 50000:50000 –restart=always –name myjenkins -u root -v /var/jenkins_home:/var/jenkins_home 镜像id(或者repository:tag)-d后台启动，-p映射端口号, –restart=always自动重启， –name容器名称， –u使用什么账号运行，-v挂载目录 查看jenkins日志，并获取初始化admin用户的密码docker logs -f 0ad214f3c2c2-f 查看实时日志，0ad214f3c2c2 容器id 注：如果密码在日志里没有查到，可以去查找/var/jenkins_home/secrets/initialAdminPassword文件，此文件已挂载到宿主机 浏览器访问jenkins 输入上一步获取到的密码，点击Continue 选择Install suggested plugins,进入后会看到插件都已安装上，忘记截图了！ 如何制作plugins.txt方法一：1.安装jenkins2.安装需要的插件3.导入已安装的插件到plugins.txtcurl -sSL “http://username:password@myhost.com:port/pluginManager/api/xml?depth=1&amp;xpath=/*/*/shortName|/*/*/version&amp;wrapper=plugins&quot; | perl -pe ‘s/.?([\w-]+).?([^&lt;]+)()(&lt;\/\w+&gt;)+/\1 \2\n/g’|sed ‘s/ /:/‘ &gt; plugins.txt 方法二：1.创建空的plugins.txt 2.打开plugins.txt文件，并填写插件名称，以及对应版本号 建议使用方法一！ 所需资源下载相关资源]]></content>
+      <categories>
+        <category>Jenkins</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Jenkins</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Docker搭建mysql数据库]]></title>
     <url>%2F2018%2F12%2F17%2FDocker%E6%90%AD%E5%BB%BAmysql%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
     <content type="text"><![CDATA[拉取镜像 演示的是5.7.24版本 docker pull mysql:5.7.24 启动镜像docker run –name mysql5.7.24 -p 3306:3306 -d –restart always -v /volume_data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1qaz2wsx! mysql:5.7.24–name是容器别名，-p对外暴露端口，-d 后台执行挂了自动重启，-v 对外挂在目录，将mysql数据持久化到本地，-e MYSQL_ROOT_PASSWORD通过变量设置root账号的密码，最后是镜像名称。启动成功后可以在外部直接访问到数据库]]></content>
@@ -108,8 +120,8 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
         <tag>Devops</tag>
+        <tag>Docker</tag>
         <tag>Centos7</tag>
         <tag>kubernetes</tag>
       </tags>
@@ -122,8 +134,8 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
         <tag>Devops</tag>
+        <tag>Docker</tag>
         <tag>Centos7</tag>
         <tag>kubernetes</tag>
       </tags>
@@ -136,8 +148,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
         <tag>Devops</tag>
+        <tag>Docker</tag>
         <tag>Register</tag>
         <tag>Centos7</tag>
       </tags>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2018-12-18T03:07:04.748Z</updated>
+  <updated>2018-12-18T08:02:22.142Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker常用命令</title>
+    <link href="https://amote.xin/2018/12/18/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://amote.xin/2018/12/18/Docker常用命令/</id>
+    <published>2018-12-18T07:39:34.000Z</published>
+    <updated>2018-12-18T08:02:22.142Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.docker search XXXX<br>​    搜索XXXX镜像<br>2.docker pull XXXX<br>​    拉取XXXX镜像<br>3.docker ps -a<br>​    查询所有容器信息<br>4.docker images<br>​    查询本地的镜像<br>5.exit<br>​    退出容器模式(此时此容器已就停止运行)<br>6.docker stop 镜像id<br>​    停止运行容器<br>7.docker rm 容器id<br>​    移除容器<br>8.docker build -t shuai/tomcat:8.5 .<br>​    从当前路径查找Dockerfile文件去制作shuai/tomcat镜像，tag是8.5<br>9.docker rmi 镜像id或者镜像名:tag<br>​    删除镜像<br>10.docker tag index.tenxcloud.com/tenxcloud/tomcat tomcat-1<br>​    为镜像起别名<br>11.docker run -d -p 5000:8080 –name container1 tomcat-1<br>​    -d 表示后台启动<br>​    如此一来，tomcat就启动了，-p 5000:8080的意思是把容器tomcat的8080端口隐射到宿主机的端口上，这样外网访问5000就能访问到我们的container1的8080 tomcat上面了<br>12.docker exec -it container1 /bin/bash<br>​    在容器container1中开启一个交互模式的终端<br>13./tomcat/webapps<br>​    查看tomcat webapp路径<br>14.docker cp DemoOne.war container1:tomcat/webapps<br>​    将宿主机里当前目录下的DemoOne.war文件复制到container1:容器的tomcat/webapps目录下<br>15.service docker restart<br>​    重启docker<br>16.docker restart container1<br>​    docker 重启容器<br>17.sudo docker cp host_path containerID:container_path<br>​    从主机复制到容器<br>18.sudo docker cp containerID:container_path host_path<br>​    从容器复制到主机<br>19.ctrl+d<br>​    退出容器且关闭, docker ps 查看无<br>20.ctrl+p+q<br>​    退出容器但不关闭, docker ps 查看有<br>21.docker run -p 8088:8080 -p 50000:50000 –restart=always –name myjenkins -u root -v /var/jenkins_home:/var/jenkins_home 镜像id(repository:tag)<br>​    生成名为jenkins的容器并运行，并以root用户身份将jenkins_home目录挂载到宿主机上，防止容器删除，数据丢失<br>​    –restart=always 在容器退出时总是重启容器,主要应用在生产环境<br>22.deb安装docker<br>​    sudo dpkg -i /path/to/package.deb<br>23.docker inspect 镜像<br>    查看镜像的元数据信息<br>24.向docker-hub推送镜像<br>    1.登录<br>    ​    docker login<br>    2.tag修改镜像名称<br>    ​    docker tag boonya/tomcat-allow-remote(原) boonyadocker/tomcat-allow-remote(新)<br>    3.推送镜像<br>    ​    docker push boonyadocker/tomcat-allow-remote:latest(新)<br>25.docker build镜像的时候,与Dockerfile同一层级的文件和文件夹都会被build进镜像里，所以不需要的文件不要和Dockerfile放在同一层级，不然会增加镜像的容量<br>26.daemon.json所在路径<br>    /etc/docker/daemon.json<br>27.删除所有容器<br>    docker rm -f $(docker ps -qa)<br>28.删除所有镜像<br>    docker rmi -f $(docker images)<br>29.docker使用现有容器生成新的镜像<br>    docker commit -m “描述信息” -a “作者” container_id(docker ps -a获取id) 新镜像名字<br>30.无缓存build镜像<br>    docker build –no-cache -t XXXX .<br>31.查询远程仓库的镜像<br>    docker -H IP:端口号 images<br>32.国内代理镜像源,修改 /etc/docker/daemon.json文件<br>    ​    {<br>    ​    “registry-mirrors”: [“<a href="https://r9xxm8z8.mirror.aliyuncs.com&quot;,&quot;https://registry.docker-cn.com&quot;]" target="_blank" rel="noopener">https://r9xxm8z8.mirror.aliyuncs.com&quot;,&quot;https://registry.docker-cn.com&quot;]</a>, #代理加速<br>    ​    “insecure-registries”:[“11.11.11.116:5000”] #镜像中心<br>    }<br>    ​    </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.docker search XXXX&lt;br&gt;​    搜索XXXX镜像&lt;br&gt;2.docker pull XXXX&lt;br&gt;​    拉取XXXX镜像&lt;br&gt;3.docker ps -a&lt;br&gt;​    查询所有容器信息&lt;br&gt;4.docker images&lt;br&gt;​  
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="https://amote.xin/categories/Docker/"/>
+    
+    
+      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>GitFlow工作流</title>
@@ -143,9 +168,9 @@
       <category term="生活" scheme="https://amote.xin/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="https://amote.xin/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="佛" scheme="https://amote.xin/tags/%E4%BD%9B/"/>
+    
+      <category term="生活" scheme="https://amote.xin/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   

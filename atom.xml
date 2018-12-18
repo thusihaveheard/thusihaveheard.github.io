@@ -62,9 +62,9 @@
       <category term="Jenkins" scheme="https://amote.xin/categories/Jenkins/"/>
     
     
-      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
-    
       <category term="Jenkins" scheme="https://amote.xin/tags/Jenkins/"/>
+    
+      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
     
   </entry>
   
@@ -143,9 +143,9 @@
       <category term="生活" scheme="https://amote.xin/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="https://amote.xin/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="佛" scheme="https://amote.xin/tags/%E4%BD%9B/"/>
+    
+      <category term="生活" scheme="https://amote.xin/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
@@ -341,9 +341,9 @@
     
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
     
-      <category term="kubernetes" scheme="https://amote.xin/tags/kubernetes/"/>
-    
       <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
+    
+      <category term="kubernetes" scheme="https://amote.xin/tags/kubernetes/"/>
     
   </entry>
   
@@ -372,9 +372,9 @@
     
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
     
-      <category term="kubernetes" scheme="https://amote.xin/tags/kubernetes/"/>
-    
       <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
+    
+      <category term="kubernetes" scheme="https://amote.xin/tags/kubernetes/"/>
     
   </entry>
   

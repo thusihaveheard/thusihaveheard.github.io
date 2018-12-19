@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2018-12-18T08:02:22.142Z</updated>
+  <updated>2018-12-19T00:52:16.161Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一品-法会因由分</title>
+    <link href="https://amote.xin/2018/12/19/%E7%AC%AC%E4%B8%80%E5%93%81-%E6%B3%95%E4%BC%9A%E5%9B%A0%E7%94%B1%E5%88%86/"/>
+    <id>https://amote.xin/2018/12/19/第一品-法会因由分/</id>
+    <published>2018-12-19T00:51:25.000Z</published>
+    <updated>2018-12-19T00:52:16.161Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="佛" scheme="https://amote.xin/categories/%E4%BD%9B/"/>
+    
+      <category term="金刚经" scheme="https://amote.xin/categories/%E4%BD%9B/%E9%87%91%E5%88%9A%E7%BB%8F/"/>
+    
+    
+      <category term="佛" scheme="https://amote.xin/tags/%E4%BD%9B/"/>
+    
+      <category term="金刚经" scheme="https://amote.xin/tags/%E9%87%91%E5%88%9A%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>金刚经题解</title>
+    <link href="https://amote.xin/2018/12/19/%E9%87%91%E5%88%9A%E7%BB%8F%E9%A2%98%E8%A7%A3/"/>
+    <id>https://amote.xin/2018/12/19/金刚经题解/</id>
+    <published>2018-12-19T00:50:01.000Z</published>
+    <updated>2018-12-19T01:01:50.127Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="佛" scheme="https://amote.xin/categories/%E4%BD%9B/"/>
+    
+      <category term="金刚经" scheme="https://amote.xin/categories/%E4%BD%9B/%E9%87%91%E5%88%9A%E7%BB%8F/"/>
+    
+    
+      <category term="佛" scheme="https://amote.xin/tags/%E4%BD%9B/"/>
+    
+      <category term="金刚经" scheme="https://amote.xin/tags/%E9%87%91%E5%88%9A%E7%BB%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker常用命令</title>
@@ -362,13 +406,13 @@
       <category term="kubernetes" scheme="https://amote.xin/categories/kubernetes/"/>
     
     
-      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
-    
       <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
-      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
+      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
     
       <category term="kubernetes" scheme="https://amote.xin/tags/kubernetes/"/>
+    
+      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
   </entry>
   
@@ -393,13 +437,13 @@
       <category term="kubernetes" scheme="https://amote.xin/categories/kubernetes/"/>
     
     
-      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
-    
       <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
-      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
+      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
     
       <category term="kubernetes" scheme="https://amote.xin/tags/kubernetes/"/>
+    
+      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
   </entry>
   
@@ -424,9 +468,9 @@
       <category term="Docker" scheme="https://amote.xin/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
-    
       <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
+    
+      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
     
       <category term="Register" scheme="https://amote.xin/tags/Register/"/>
     

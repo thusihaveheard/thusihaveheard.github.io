@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[第一品-法会因由分]]></title>
+    <url>%2F2018%2F12%2F19%2F%E7%AC%AC%E4%B8%80%E5%93%81-%E6%B3%95%E4%BC%9A%E5%9B%A0%E7%94%B1%E5%88%86%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>佛</category>
+        <category>金刚经</category>
+      </categories>
+      <tags>
+        <tag>佛</tag>
+        <tag>金刚经</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[金刚经题解]]></title>
+    <url>%2F2018%2F12%2F19%2F%E9%87%91%E5%88%9A%E7%BB%8F%E9%A2%98%E8%A7%A3%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>佛</category>
+        <category>金刚经</category>
+      </categories>
+      <tags>
+        <tag>佛</tag>
+        <tag>金刚经</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Docker常用命令]]></title>
     <url>%2F2018%2F12%2F18%2FDocker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[1.docker search XXXX​ 搜索XXXX镜像2.docker pull XXXX​ 拉取XXXX镜像3.docker ps -a​ 查询所有容器信息4.docker images​ 查询本地的镜像5.exit​ 退出容器模式(此时此容器已就停止运行)6.docker stop 镜像id​ 停止运行容器7.docker rm 容器id​ 移除容器8.docker build -t shuai/tomcat:8.5 .​ 从当前路径查找Dockerfile文件去制作shuai/tomcat镜像，tag是8.59.docker rmi 镜像id或者镜像名:tag​ 删除镜像10.docker tag index.tenxcloud.com/tenxcloud/tomcat tomcat-1​ 为镜像起别名11.docker run -d -p 5000:8080 –name container1 tomcat-1​ -d 表示后台启动​ 如此一来，tomcat就启动了，-p 5000:8080的意思是把容器tomcat的8080端口隐射到宿主机的端口上，这样外网访问5000就能访问到我们的container1的8080 tomcat上面了12.docker exec -it container1 /bin/bash​ 在容器container1中开启一个交互模式的终端13./tomcat/webapps​ 查看tomcat webapp路径14.docker cp DemoOne.war container1:tomcat/webapps​ 将宿主机里当前目录下的DemoOne.war文件复制到container1:容器的tomcat/webapps目录下15.service docker restart​ 重启docker16.docker restart container1​ docker 重启容器17.sudo docker cp host_path containerID:container_path​ 从主机复制到容器18.sudo docker cp containerID:container_path host_path​ 从容器复制到主机19.ctrl+d​ 退出容器且关闭, docker ps 查看无20.ctrl+p+q​ 退出容器但不关闭, docker ps 查看有21.docker run -p 8088:8080 -p 50000:50000 –restart=always –name myjenkins -u root -v /var/jenkins_home:/var/jenkins_home 镜像id(repository:tag)​ 生成名为jenkins的容器并运行，并以root用户身份将jenkins_home目录挂载到宿主机上，防止容器删除，数据丢失​ –restart=always 在容器退出时总是重启容器,主要应用在生产环境22.deb安装docker​ sudo dpkg -i /path/to/package.deb23.docker inspect 镜像 查看镜像的元数据信息24.向docker-hub推送镜像 1.登录 ​ docker login 2.tag修改镜像名称 ​ docker tag boonya/tomcat-allow-remote(原) boonyadocker/tomcat-allow-remote(新) 3.推送镜像 ​ docker push boonyadocker/tomcat-allow-remote:latest(新)25.docker build镜像的时候,与Dockerfile同一层级的文件和文件夹都会被build进镜像里，所以不需要的文件不要和Dockerfile放在同一层级，不然会增加镜像的容量26.daemon.json所在路径 /etc/docker/daemon.json27.删除所有容器 docker rm -f $(docker ps -qa)28.删除所有镜像 docker rmi -f $(docker images)29.docker使用现有容器生成新的镜像 docker commit -m “描述信息” -a “作者” container_id(docker ps -a获取id) 新镜像名字30.无缓存build镜像 docker build –no-cache -t XXXX .31.查询远程仓库的镜像 docker -H IP:端口号 images32.国内代理镜像源,修改 /etc/docker/daemon.json文件 ​ { ​ “registry-mirrors”: [“https://r9xxm8z8.mirror.aliyuncs.com&quot;,&quot;https://registry.docker-cn.com&quot;], #代理加速 ​ “insecure-registries”:[“11.11.11.116:5000”] #镜像中心 } ​]]></content>
@@ -142,10 +168,10 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
         <tag>Devops</tag>
-        <tag>Centos7</tag>
+        <tag>Docker</tag>
         <tag>kubernetes</tag>
+        <tag>Centos7</tag>
       </tags>
   </entry>
   <entry>
@@ -156,10 +182,10 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
         <tag>Devops</tag>
-        <tag>Centos7</tag>
+        <tag>Docker</tag>
         <tag>kubernetes</tag>
+        <tag>Centos7</tag>
       </tags>
   </entry>
   <entry>
@@ -170,8 +196,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
         <tag>Devops</tag>
+        <tag>Docker</tag>
         <tag>Register</tag>
         <tag>Centos7</tag>
       </tags>

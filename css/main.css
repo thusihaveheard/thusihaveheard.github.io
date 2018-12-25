@@ -1962,7 +1962,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e48899;
+  background: #bed5d5;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2111,7 +2111,7 @@ img:hover {
   width: 25px;
   height: 25px;
   overflow: hidden;
-  background: url("../img/play.png") no-repeat;
+  background: url("/img/play.png") no-repeat;
   background-size: 100%;
 }
 #musicControl a audio {

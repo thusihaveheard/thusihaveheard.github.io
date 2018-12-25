@@ -23,6 +23,74 @@
 
 
 
+  <span id="musicControl">
+	<a id="mc_play" class="on" onclick="play_music();">
+		<audio id="musicfx" loop="loop" autoplay="autoplay">
+			<source src="music/love story.mp3" type="audio/mpeg">
+		</audio>
+	</a>
+  </span>
+  
+  <script>
+		function play_music(){
+			if ($('#mc_play').hasClass('on')){
+				$('#mc_play audio').get(0).pause();
+				$('#mc_play').attr('class','stop');
+			}else{
+				$('#mc_play audio').get(0).play();
+				$('#mc_play').attr('class','on');
+			}
+			$('#music_play_filter').hide();
+			event.stopPropagation(); //阻止冒泡
+		}
+		function just_play(id){
+			$('#mc_play audio').get(0).play();
+			$('#mc_play').attr('class','on');
+			if (typeof(id)!='undefined'){
+				$('#music_play_filter').hide();
+			}
+			event.stopPropagation(); //阻止冒泡
+		}
+		function is_weixn(){
+			return false;
+			var ua = navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i)=="micromessenger") {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		var play_filter=document.getElementById('music_play_filter');
+		play_filter.addEventListener('click', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('touchstart', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('touchend', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('touchmove', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('mousedown', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('mouseup', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('mousemove',function(){
+			just_play(1);
+		});
+		window.onload=function(){
+			if (!is_weixn()){
+				just_play();
+			}
+		}
+	</script>
+  
+
+
 
 
 
@@ -77,7 +145,7 @@
 
 
 
-  <meta name="keywords" content="佛,生活,">
+  <meta name="keywords" content="生活,佛,">
 
 
 
@@ -91,7 +159,7 @@
 
 
 <meta name="description" content="一个屡屡失意的年轻人千里迢迢来到普济寺，慕名寻到老僧释圆，沮丧地对他说：“人生总不如意，活着也是苟且，有什么意思呢？”　  释圆静静听着年轻人的叹息和絮叨，末了才吩咐小和尚说：“施主远道而来，烧一壶温水送过来。”　　不一会儿，小和尚送来了一壶温水，释圆抓了茶叶放进杯子，然后用温水沏了，放在茶几上，微笑着请年轻人喝茶。杯子冒出微微的水汽，茶叶静静浮着。年轻人不解地询问：“宝刹怎么温茶？”　　释">
-<meta name="keywords" content="佛,生活">
+<meta name="keywords" content="生活,佛">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浮生如茶">
 <meta property="og:url" content="https://amote.xin/2018/12/14/浮生如茶/index.html">
@@ -463,9 +531,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/佛/" rel="tag"># 佛</a>
-          
             <a href="/tags/生活/" rel="tag"># 生活</a>
+          
+            <a href="/tags/佛/" rel="tag"># 佛</a>
           
         </div>
       
@@ -655,15 +723,6 @@
             </div>
           
 
-		  <!-- music -->
-		  <span id="musicControl">
-			<a id="mc_play" class="on" onclick="play_music();">
-				<audio id="musicfx" loop="loop" autoplay="autoplay">
-					<source src="music/love story.mp3" type="audio/mpeg">
-				</audio>
-			</a>
-		  </span>
-		  
           
             <div class="links-of-author motion-element">
                 

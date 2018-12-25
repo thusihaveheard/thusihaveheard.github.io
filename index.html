@@ -401,182 +401,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/17/安装Ingress/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="如是我闻">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/psb.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amote">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/17/安装Ingress/" itemprop="url">安装Ingress</a></h1>
-        
-
-        <div class="post-meta">
-		  
-            <i class="fa fa-thumb-tack"></i>
-            <font color="7D26CD">置顶</font>
-            <span class="post-meta-divider">|</span>
-          
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-17T14:40:29+08:00">
-                2018-12-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/kubernetes/" itemprop="url" rel="index">
-                    <span itemprop="name">kubernetes</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/12/17/安装Ingress/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/17/安装Ingress/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/12/17/安装Ingress/" class="leancloud_visitors" data-flag-title="安装Ingress">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Ingress其实就是从kuberenets集群外部访问集群的一个入口，将外部的请求转发到集群内不同的Service 上，其实就相当于nginx、apache 等负载均衡代理服务器，再加上一个规则定义，路由信息的刷新需要靠Ingress controller来提供。Ingress controller可以理解为一个监听器，通过不断地与kube-apiserver打交道，实时的感知后端service、pod 等的变化，当得到这些变化信息后，Ingress controller再结合Ingress的配置，更新反向代理负载均衡器，达到服务发现的作用。其实这点和服务发现工具consul的consul-template非常类似。# 创建rbac# 创建文件：ingress-rbac.yaml，用于service account验证
-apiVersion: v1kind: ServiceAccountmetadata:  name: ingress  namespace: kube-system  -–kind: ClusterRoleBindingapiVersion: rbac.authori
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/17/安装Ingress/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/14/浮生如茶/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -702,364 +526,6 @@ apiVersion: v1kind: ServiceAccountmetadata:  name: ingress  namespace: kube-syst
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/14/浮生如茶/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/14/centos7搭建docker私有镜像中心/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="如是我闻">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/psb.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amote">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/14/centos7搭建docker私有镜像中心/" itemprop="url">centos7搭建docker私有镜像中心</a></h1>
-        
-
-        <div class="post-meta">
-		  
-            <i class="fa fa-thumb-tack"></i>
-            <font color="7D26CD">置顶</font>
-            <span class="post-meta-divider">|</span>
-          
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-14T16:39:00+08:00">
-                2018-12-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Docker/" itemprop="url" rel="index">
-                    <span itemprop="name">Docker</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/12/14/centos7搭建docker私有镜像中心/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/14/centos7搭建docker私有镜像中心/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/12/14/centos7搭建docker私有镜像中心/" class="leancloud_visitors" data-flag-title="centos7搭建docker私有镜像中心">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          安装Docker Registrysudo docker run -d -v /home/hzq/registry:/var/lib/registry -p 5000:5000 –restart=always –privileged=true –name registry registry:latest
-•    -v /home/hzq/registry:/var/lib/registry 默认情况下，会将仓库存放于容器内的/var/lib/registry目录下，指定本地目录挂载到容器。•    -p 5000:5000 端口映射•    –restart=always1 在容器退出时总是重启容器,主要应用在生产环境•    –privileged=true 在CentOS7中的安全模块selinux把权限禁掉了，参数给容器加特权，不加上传镜像会报权限错误OSError: [Errno 13] Permission denied: ‘/tmp/registry/repositories/liibrary’)或者（Received unexpected HTTP status: 50
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/14/centos7搭建docker私有镜像中心/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/13/Devops搭建手冊/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="如是我闻">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/psb.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amote">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/13/Devops搭建手冊/" itemprop="url">Devops搭建手冊</a></h1>
-        
-
-        <div class="post-meta">
-		  
-            <i class="fa fa-thumb-tack"></i>
-            <font color="7D26CD">置顶</font>
-            <span class="post-meta-divider">|</span>
-          
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-13T17:35:06+08:00">
-                2018-12-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Devops/" itemprop="url" rel="index">
-                    <span itemprop="name">Devops</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/12/13/Devops搭建手冊/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/13/Devops搭建手冊/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/12/13/Devops搭建手冊/" class="leancloud_visitors" data-flag-title="Devops搭建手冊">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Gitlab安装安装命令dpkg --force-depends -i gitlab-ce_10.3.3-ce.0_amd64.deb
-备份/etc/gitlab/gitlab.rb文件cp gitlab.rb gitlab.rb.bak
-修改/etc/gitlab/gitlab.rb文件external_url &quot;http://gitlab.example.com&quot; 为 external_url &quot;http://ip地址&quot;
-使修改生效sudo gitlab-ctl reconfigure
-默认root账号，需添加密码访问urlip:端口号(默认80)
-Nexus安装创建文件夹cd /usr/localmkdir nexus
-下载Nexus安装包，并解压文件wget https://sonatype-download.global.ssl.fastly.net/nexus/oss/nexus-2.14.8-01-bundle.tar.gztar -xzvf nexus-2.14.8-01-bundle.tar.gz -C nexus
-添加root
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/13/Devops搭建手冊/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2233,6 +1699,593 @@ Nexus安装创建文件夹cd /usr/localmkdir nexus
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/19/第七十六章/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/19/第七十五章/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="如是我闻">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/psb.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amote">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/第七十五章/" itemprop="url">第七十五章</a></h1>
+        
+
+        <div class="post-meta">
+		  
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T13:15:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/道/" itemprop="url" rel="index">
+                    <span itemprop="name">道</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/道/道德经/" itemprop="url" rel="index">
+                    <span itemprop="name">道德经</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/19/第七十五章/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/19/第七十五章/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/19/第七十五章/" class="leancloud_visitors" data-flag-title="第七十五章">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          [原文]
+民之饥，以其上食税之多，是以饥。民之难治，以其上之有为①，是以难治。民之轻死，以其上求生之厚②，是以轻死。夫唯无以生为③者，是贤④于贵生⑤。
+[译文]
+人民所以遭受饥荒，就是由于统治者吞吃赋税太多，所以人民才陷于饥饿。人民之所以难于统治，是由于统治者政令繁苛、喜欢有所作为，所以人民就难于统治。人民之所以轻生冒死，是由于统治者为了奉养自己，把民脂民膏都搜刮净了，所以人民觉得死了不算什么。只有不去追求生活享受的人，才比过分看重自己生命的人高明。
+　
+[注释]
+1、有为：繁苛的政治，统治者强作妄为。
+2、以其上求生之厚：由于统治者奉养过于丰厚奢侈。
+3、无以生为：不要使生活上的奉养过分奢侈丰厚。
+4、贤：胜过的、超过的意思。
+5、贵生：厚养生命。
+[引语]
+上一章里，老子对严苛的政治压迫给予了抨击，要求统治者善待民众。这一章里，老子又对繁重的经济剥削进行指责。在《道德经》里的七十二章、七十四章、本章和七十七章，内容基本上都是对统治者进行无情揭露和严正警告。他认为，宽容的政治，比暴虐的政治要高明得多。因为，一旦人民不畏惧死亡而进行反抗，为求生存而暴动，那样，统治者的日子就不好过下去。
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/19/第七十五章/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/19/第七十四章/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="如是我闻">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/psb.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amote">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/第七十四章/" itemprop="url">第七十四章</a></h1>
+        
+
+        <div class="post-meta">
+		  
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T13:15:49+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/道/" itemprop="url" rel="index">
+                    <span itemprop="name">道</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/道/道德经/" itemprop="url" rel="index">
+                    <span itemprop="name">道德经</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/19/第七十四章/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/19/第七十四章/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/19/第七十四章/" class="leancloud_visitors" data-flag-title="第七十四章">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          [原文]
+民不畏死，奈何以死惧之。若使民常畏死，而为奇①者，吾得执②而杀之，孰敢？常有司杀者③杀。夫代司杀者④杀，是谓代大匠斫⑤，希有不伤其手者矣。
+[译文]
+人民不畏惧死亡，为什么用死来吓唬他们呢？假如人民真的畏惧死亡的话，对于为非作歹的人，我们就把他抓来杀掉。谁还敢为非作歹？经常有专管杀人的人去执行杀人的任务，代替专管杀人的人去杀人，就如同代替高明的木匠去砍木头，那代替高明的木匠砍木头的人，很少有不砍伤自己手指头的。
+　
+[注释]
+1、为奇：奇，奇诡、诡异。为奇指为邪作恶的人。
+2、执：拘押。
+3、司杀者：指专管杀人的人。
+4、代司杀者：代替专管杀人的人。
+5、斫：砍、削。
+[引语]
+这一章讲老子的政治主张。他以为当时统治者施行苛政和酷刑，滥杀百姓，压制民众，其结果是，一旦人民不忍受了，就不会畏惧死亡。人的自然死亡，是从“司杀者杀”的天道掌管的，但人间的君主残暴无道，把人民推向死亡线上，这从根本上悖逆了自然法则。因此，从本章内容看，它是老子对于当时严刑峻法、逼使人民走向死途的情形，提出自己的批评与抗议。
+　
+[评析]
+有的学者在研究本章时这样写道：“老子经常讲退守、柔顺、不敢为天下
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/19/第七十四章/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/19/第七十三章/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="如是我闻">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/psb.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amote">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/第七十三章/" itemprop="url">第七十三章</a></h1>
+        
+
+        <div class="post-meta">
+		  
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T13:15:43+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/道/" itemprop="url" rel="index">
+                    <span itemprop="name">道</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/道/道德经/" itemprop="url" rel="index">
+                    <span itemprop="name">道德经</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/19/第七十三章/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/19/第七十三章/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/19/第七十三章/" class="leancloud_visitors" data-flag-title="第七十三章">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          [原文]
+勇于敢则杀，勇于不敢则活①。此两者，或利或害②。天之所恶，孰知其故？是以圣人犹难之③。天之道④，不争而善胜，不应而善应，不召而自来，繟然⑤而善谋。天网恢恢⑥，疏而不失⑦。
+[译文]
+勇于坚强就会死，勇于柔弱就可以活，这两种勇的结果，有的得利，有的受害。天所厌恶的，谁知道是什么缘故？有道的圣人也难以解说明白。自然的规律是，不斗争而善于取胜；不言语而善于应承；不召唤而自动到来，坦然而善于安排筹划。自然的范围，宽广无边，虽然宽疏但并不漏失。
+　
+[注释]
+1、勇于敢则杀，勇于不敢则活：敢，勇敢、坚强；不敢，柔弱、软弱。此句意为勇于坚强就会死，勇于柔弱就可以活命。
+2、或利或害：勇于柔弱则利，勇于坚强则害。
+3、是以圣人犹难之：此句已见于六十三章。
+4、天之道：指自然的规律。
+5、繟然：安然、坦然。
+6、天网恢恢：天网指自然的范围；恢恢，广大、宽广无边。
+7、疏而不失：虽然宽疏但并不漏失。
+[引语]
+本章主要讲人生哲学。第一层意思是柔弱胜坚强，第二层意思是天道自然。这两层意思之间是相互沟通的。老子认为，两种不同的勇，会产生两种不同的结果，一则遭害，一则存活。“勇于敢则杀，勇于不敢则活
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/19/第七十三章/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

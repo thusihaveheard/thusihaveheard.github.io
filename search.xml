@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Git的SSH认证]]></title>
     <url>%2F2018%2F12%2F28%2FGit%E7%9A%84SSH%E8%AE%A4%E8%AF%81%2F</url>
-    <content type="text"><![CDATA[生成SSH公钥1ssh-keygen -t rsa -C “一般填写邮箱” -t rsa加密方式，默认是dsa，-C 后跟注释信息，这两个参数都可以省略默认生成文件的路径在~/.ssh 目录下 # 将生成的公钥发送到对方的git服务器上去1ssh-copy-id -i C:/Users/yourname/.ssh/id_rsa.pub git@server_ip 此时是需要输入对应用户(命令中是git用户)的密码 # 测试能否登录1ssh git@server_ip 注意：此时测试登录就不需要输密码了。如果提示输入密码，说明之前的操作没用成功！自行查找原因。。。 Ps: 如果是多个git服务端，重复步骤二即可 服务器端无密码登录跟这个差不多！]]></content>
+    <content type="text"><![CDATA[生成SSH公钥ssh-keygen -t rsa -C “一般填写邮箱” -t rsa加密方式，默认是dsa，-C 后跟注释信息，这两个参数都可以省略默认生成文件的路径在~/.ssh 目录下 # 将生成的公钥发送到对方的git服务器上去 ssh-copy-id -i C:/Users/yourname/.ssh/id_rsa.pub git@server_ip 此时是需要输入对应用户(命令中是git用户)的密码 # 测试能否登录 ssh git@server_ip 注意：此时测试登录就不需要输密码了。如果提示输入密码，说明之前的操作没用成功！自行查找原因。。。 Ps: 如果是多个git服务端，重复步骤二即可 服务器端无密码登录跟这个差不多！]]></content>
       <categories>
         <category>Git</category>
       </categories>
@@ -1729,8 +1729,8 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Devops</tag>
         <tag>Docker</tag>
+        <tag>Devops</tag>
         <tag>Centos7</tag>
         <tag>kubernetes</tag>
       </tags>
@@ -1743,8 +1743,8 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Devops</tag>
         <tag>Docker</tag>
+        <tag>Devops</tag>
         <tag>Centos7</tag>
         <tag>kubernetes</tag>
       </tags>
@@ -1757,8 +1757,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Devops</tag>
         <tag>Docker</tag>
+        <tag>Devops</tag>
         <tag>Register</tag>
         <tag>Centos7</tag>
       </tags>

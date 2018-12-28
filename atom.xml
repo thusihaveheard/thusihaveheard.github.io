@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2018-12-28T11:39:45.235Z</updated>
+  <updated>2018-12-28T12:17:28.057Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo常用命令</title>
+    <link href="https://amote.xin/2018/12/28/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://amote.xin/2018/12/28/hexo常用命令/</id>
+    <published>2018-12-28T12:16:32.000Z</published>
+    <updated>2018-12-28T12:17:28.057Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br></pre></td></tr></table></figure><p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo 默认在目前的文件夹建立网站。</p><h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure><p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">_config.yml</a> 中的 <code>default_layout</code> 参数代替。如果标题包含空格的话，请使用引号括起来。</p><h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>生成静态文件。</p><table><thead><tr><th>选项</th><th>描述</th></tr></thead><tbody><tr><td><code>-d</code>, <code>--deploy</code></td><td>文件生成后立即部署网站</td></tr><tr><td><code>-w</code>, <code>--watch</code></td><td>监视文件变动</td></tr></tbody></table><p>该命令可以简写为</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure><h2 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure><p>发表草稿。</p><h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>启动服务器。默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p><table><thead><tr><th>选项</th><th>描述</th></tr></thead><tbody><tr><td><code>-p</code>, <code>--port</code></td><td>重设端口</td></tr><tr><td><code>-s</code>, <code>--static</code></td><td>只使用静态文件</td></tr><tr><td><code>-l</code>, <code>--log</code></td><td>启动日记记录，使用覆盖记录格式</td></tr></tbody></table><h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>部署网站。</p><table><thead><tr><th>参数</th><th>描述</th></tr></thead><tbody><tr><td><code>-g</code>, <code>--generate</code></td><td>部署之前预先生成静态文件</td></tr></tbody></table><p>该命令可以简写为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure><h2 id="render"><a href="#render" class="headerlink" title="render"></a>render</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo render &lt;file1&gt; [file2] ...</span><br></pre></td></tr></table></figure><p>渲染文件。</p><table><thead><tr><th>参数</th><th>描述</th></tr></thead><tbody><tr><td><code>-o</code>, <code>--output</code></td><td>设置输出路径</td></tr></tbody></table><h2 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo migrate &lt;type&gt;</span><br></pre></td></tr></table></figure><p>从其他博客系统 <a href="https://hexo.io/zh-cn/docs/migration" target="_blank" rel="noopener">迁移内容</a>。</p><h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure><p>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p><p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p><h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo list &lt;type&gt;</span><br></pre></td></tr></table></figure><p>列出网站资料。</p><h2 id="version"><a href="#version" class="headerlink" title="version"></a>version</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo version</span><br></pre></td></tr></table></figure><p>显示 Hexo 版本。</p><h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><h3 id="安全模式"><a href="#安全模式" class="headerlink" title="安全模式"></a>安全模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --safe</span><br></pre></td></tr></table></figure><p>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p><h3 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --debug</span><br></pre></td></tr></table></figure><p>在终端中显示调试信息并记录到 <code>debug.log</code>。当您碰到问题时，可以尝试用调试模式重新执行一次，并 <a href="https://github.com/hexojs/hexo/issues/new" target="_blank" rel="noopener">提交调试信息到 GitHub</a>。</p><h3 id="简洁模式"><a href="#简洁模式" class="headerlink" title="简洁模式"></a>简洁模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --silent</span><br></pre></td></tr></table></figure><p>隐藏终端信息。</p><h3 id="自定义配置文件的路径"><a href="#自定义配置文件的路径" class="headerlink" title="自定义配置文件的路径"></a>自定义配置文件的路径</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --config custom.yml</span><br></pre></td></tr></table></figure><p>自定义配置文件的路径，执行后将不再使用 <code>_config.yml</code>。</p><h3 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --draft</span><br></pre></td></tr></table></figure><p>显示 <code>source/_drafts</code> 文件夹中的草稿文章。</p><h3 id="自定义-CWD"><a href="#自定义-CWD" class="headerlink" title="自定义 CWD"></a>自定义 CWD</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --cwd /path/to/cwd</span><br></pre></td></tr></table></figure><p>自定义当前工作目录（Current working directory）的路径。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;init&quot;&gt;&lt;a href=&quot;#init&quot; class=&quot;headerlink&quot; title=&quot;init&quot;&gt;&lt;/a&gt;init&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://amote.xin/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://amote.xin/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git的SSH认证</title>
     <link href="https://amote.xin/2018/12/28/Git%E7%9A%84SSH%E8%AE%A4%E8%AF%81/"/>
     <id>https://amote.xin/2018/12/28/Git的SSH认证/</id>
     <published>2018-12-28T11:31:24.000Z</published>
-    <updated>2018-12-28T11:39:45.235Z</updated>
+    <updated>2018-12-28T12:13:06.692Z</updated>
     
     <content type="html"><![CDATA[<h1 id="生成SSH公钥"><a href="#生成SSH公钥" class="headerlink" title="生成SSH公钥"></a>生成SSH公钥</h1><pre><code>ssh-keygen -t rsa -C “一般填写邮箱”</code></pre><font color="#FF0000"> -t rsa加密方式，默认是dsa，-C 后跟注释信息，这两个参数都可以省略<br>默认生成文件的路径在~/.ssh 目录下</font><br> <img src="/2018/12/28/Git的SSH认证/1.png"><br><br># 将生成的公钥发送到对方的git服务器上去<br>    ssh-copy-id -i C:/Users/yourname/.ssh/id_rsa.pub git@server_ip<br><font color="#FF0000"> 此时是需要输入对应用户(命令中是git用户)的密码</font><br> <img src="/2018/12/28/Git的SSH认证/2.png"><br># 测试能否登录<br>    ssh git@server_ip<br> <img src="/2018/12/28/Git的SSH认证/3.png"><br><font color="#FF0000"> 注意：此时测试登录就不需要输密码了。如果提示输入密码，说明之前的操作没用成功！自行查找原因。。。</font><p><strong>Ps:</strong></p><ol><li><strong>如果是多个git服务端，重复步骤二即可</strong></li><li><strong>服务器端无密码登录跟这个差不多！</strong></li></ol>]]></content>
     
@@ -3878,9 +3903,9 @@
       <category term="生活" scheme="https://amote.xin/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="佛" scheme="https://amote.xin/tags/%E4%BD%9B/"/>
-    
       <category term="生活" scheme="https://amote.xin/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="佛" scheme="https://amote.xin/tags/%E4%BD%9B/"/>
     
   </entry>
   

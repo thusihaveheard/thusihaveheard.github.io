@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2018-12-29T02:22:30.535Z</updated>
+  <updated>2018-12-29T02:31:40.326Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://amote.xin/2018/12/29/Git%E7%9A%84SSH%E8%AE%A4%E8%AF%81/"/>
     <id>https://amote.xin/2018/12/29/Git的SSH认证/</id>
     <published>2018-12-29T01:21:50.000Z</published>
-    <updated>2018-12-29T02:22:30.535Z</updated>
+    <updated>2018-12-29T02:31:40.326Z</updated>
     
     <content type="html"><![CDATA[<h1 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h1><pre><code>$ ssh-keygen -t rsa -C “一般填写邮箱”</code></pre><p><font color="#FF0000"> -t rsa加密方式，默认是dsa，-C 后跟注释信息，这两个参数都可以省略<br>默认生成文件的路径在~/.ssh 目录下</font><br> <img src="/2018/12/29/Git的SSH认证/1.png"></p><h1 id="将生成的公钥发送到git服务器上去"><a href="#将生成的公钥发送到git服务器上去" class="headerlink" title="将生成的公钥发送到git服务器上去"></a>将生成的公钥发送到git服务器上去</h1><pre><code>$ ssh-copy-id -i C:/Users/yourname/.ssh/id_rsa.pub git@server_ip</code></pre><p><font color="#FF0000"> 此时是需要输入对应用户(命令中是git用户)的密码</font><br> <img src="/2018/12/29/Git的SSH认证/2.png"></p><h1 id="测试能否登录"><a href="#测试能否登录" class="headerlink" title="测试能否登录"></a>测试能否登录</h1><pre><code>$ ssh git@server_ip</code></pre><img src="/2018/12/29/Git的SSH认证/3.png"><p><font color="#FF0000">注意：此时测试登录就不需要输密码了。如果提示输入密码，说明之前的操作不起作用！自行查找原因</font>。。。</p><p><strong>Ps:</strong></p><ol><li><strong>如果是多个git服务端，重复步骤二即可</strong></li><li><strong>服务器端无密码登录跟这个差不多！</strong></li></ol>]]></content>
     

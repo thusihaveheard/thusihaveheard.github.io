@@ -702,11 +702,19 @@
       
         
           
-          安装依赖包命令：​    yum -y install gcc pcre-devel openssl openssl-devel   
-下载nginx包，可以访问可去官网查看nginx包，http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包下载：​    wget http://nginx.org/download/ nginx-1.15.2.tar.gz
-解压包：​    tar -xzvf  nginx-1.15.2.tar.gz进入解压目录：​    cd nginx-1.15.2
-检测安装平台的目标特征，例如检测是否有CC或GCC命令：​    ./configure注意：如果后面还想要配置 SSL 协议(https)，请执行以下命令​    ./configure –prefix=/usr/local/nginx –with-http_stub_status_module –with-http_ssl_module –with-file-aio –with-http_realip_module
-编译和安装命令
+          安装依赖包yum -y install gcc pcre-devel openssl openssl-devel   
+下载nginx包，可以访问可去官网查看nginx包，http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包命令:​    wget http://nginx.org/download/ nginx-1.15.2.tar.gz
+解压包：
+tar -xzvf  nginx-1.15.2.tar.gz
+进入解压目录：
+cd nginx-1.15.2
+检测安装平台的目标特征，例如检测是否有CC或GCC命令：
+./configure
+注意：如果后面还想要配置 SSL 协议(https)，请执行以下命令
+
+./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-file-aio --with-http_realip_module
+编译和安装命令：
+make &amp;&amp
           ...
           <!--noindex-->
           <div class="post-button text-center">

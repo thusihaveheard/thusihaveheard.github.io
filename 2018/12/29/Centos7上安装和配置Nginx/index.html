@@ -158,19 +158,19 @@
 
 
 
-<meta name="description" content="安装依赖包命令：​    yum -y install gcc pcre-devel openssl openssl-devel    下载nginx包，可以访问可去官网查看nginx包，http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包下载：​    wget http://nginx.org/download/ nginx-">
+<meta name="description" content="安装依赖包yum -y install gcc pcre-devel openssl openssl-devel    下载nginx包，可以访问可去官网查看nginx包，http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包命令:​    wget http://nginx.org/download/ nginx-1.15.2.t">
 <meta name="keywords" content="Nginx,Centos7">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Centos7上安装和配置Nginx">
 <meta property="og:url" content="https://amote.xin/2018/12/29/Centos7上安装和配置Nginx/index.html">
 <meta property="og:site_name" content="Amote">
-<meta property="og:description" content="安装依赖包命令：​    yum -y install gcc pcre-devel openssl openssl-devel    下载nginx包，可以访问可去官网查看nginx包，http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包下载：​    wget http://nginx.org/download/ nginx-">
+<meta property="og:description" content="安装依赖包yum -y install gcc pcre-devel openssl openssl-devel    下载nginx包，可以访问可去官网查看nginx包，http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包命令:​    wget http://nginx.org/download/ nginx-1.15.2.t">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://amote.xin/2018/12/29/Centos7上安装和配置Nginx/1.png">
-<meta property="og:updated_time" content="2018-12-29T07:20:34.703Z">
+<meta property="og:updated_time" content="2018-12-29T07:37:01.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Centos7上安装和配置Nginx">
-<meta name="twitter:description" content="安装依赖包命令：​    yum -y install gcc pcre-devel openssl openssl-devel    下载nginx包，可以访问可去官网查看nginx包，http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包下载：​    wget http://nginx.org/download/ nginx-">
+<meta name="twitter:description" content="安装依赖包yum -y install gcc pcre-devel openssl openssl-devel    下载nginx包，可以访问可去官网查看nginx包，http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包命令:​    wget http://nginx.org/download/ nginx-1.15.2.t">
 <meta name="twitter:image" content="https://amote.xin/2018/12/29/Centos7上安装和配置Nginx/1.png">
 
 
@@ -526,15 +526,28 @@
       
 
       
-        <h1 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h1><p>命令：<br>​    yum -y install gcc pcre-devel openssl openssl-devel   </p>
-<h1 id="下载nginx包，可以访问"><a href="#下载nginx包，可以访问" class="headerlink" title="下载nginx包，可以访问"></a>下载nginx包，可以访问</h1><p>可去官网查看nginx包，<a href="http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包" target="_blank" rel="noopener">http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包</a><br>下载：<br>​    wget <a href="http://nginx.org/download/" target="_blank" rel="noopener">http://nginx.org/download/</a> nginx-1.15.2.tar.gz</p>
-<p>解压包：<br>​    tar -xzvf  nginx-1.15.2.tar.gz<br>进入解压目录：<br>​    cd nginx-1.15.2</p>
-<h1 id="检测安装平台的目标特征，例如检测是否有CC或GCC"><a href="#检测安装平台的目标特征，例如检测是否有CC或GCC" class="headerlink" title="检测安装平台的目标特征，例如检测是否有CC或GCC"></a>检测安装平台的目标特征，例如检测是否有CC或GCC</h1><p>命令：<br>​    ./configure<br>注意：如果后面还想要配置 SSL 协议(https)，请执行以下命令<br>​    ./configure –prefix=/usr/local/nginx –with-http_stub_status_module –with-http_ssl_module –with-file-aio –with-http_realip_module</p>
-<h1 id="编译和安装"><a href="#编译和安装" class="headerlink" title="编译和安装"></a>编译和安装</h1><p>命令：<br>​    make &amp;&amp; make install<br>​    </p>
-<h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h1><p>在/etc/profile 文件结尾中加入配置  ，命令：vim /etc/profile<br>​    #nginx configure<br>​    export NGINX_HOME=/usr/local/nginx<br>​    export PATH=$PATH:$NGINX_HOME/sbin</p>
-<p>编译完保存退出并执行 source /etc/profile<br>执行命令 nginx -v 显示nginx 版本号说明环境变量配置成功</p>
-<h1 id="修改nginx-conf"><a href="#修改nginx-conf" class="headerlink" title="修改nginx.conf"></a>修改nginx.conf</h1><p>nginx安装成功后，默认安装路径：/usr/local/nginx,而nginx.conf所在路径：/usr/local/nginx/conf/nginx.conf<br>命令：<br>​    cd /usr/local/nginx/conf<br>​    vi nginx.conf</p>
-<p>修改root解析路径为项目路径<br>将user改为root,否则nginx无法访问项目<br>将404.html页面放在项目的根目录下，打开error_page注释<br><img src="/2018/12/29/Centos7上安装和配置Nginx/1.png"></p>
+        <h1 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h1><pre><code>yum -y install gcc pcre-devel openssl openssl-devel   
+</code></pre><h1 id="下载nginx包，可以访问"><a href="#下载nginx包，可以访问" class="headerlink" title="下载nginx包，可以访问"></a>下载nginx包，可以访问</h1><p>可去官网查看nginx包，<a href="http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包" target="_blank" rel="noopener">http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包</a><br>命令:<br>​    wget <a href="http://nginx.org/download/" target="_blank" rel="noopener">http://nginx.org/download/</a> nginx-1.15.2.tar.gz</p>
+<p>解压包：</p>
+<pre><code>tar -xzvf  nginx-1.15.2.tar.gz
+</code></pre><p>进入解压目录：</p>
+<pre><code>cd nginx-1.15.2
+</code></pre><h1 id="检测安装平台的目标特征，例如检测是否有CC或GCC"><a href="#检测安装平台的目标特征，例如检测是否有CC或GCC" class="headerlink" title="检测安装平台的目标特征，例如检测是否有CC或GCC"></a>检测安装平台的目标特征，例如检测是否有CC或GCC</h1><p>命令：</p>
+<pre><code>./configure
+</code></pre><font color="#FF0000">注意：如果后面还想要配置 SSL 协议(https)，请执行以下命令</font>
+
+<pre><code>./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-file-aio --with-http_realip_module
+</code></pre><h1 id="编译和安装"><a href="#编译和安装" class="headerlink" title="编译和安装"></a>编译和安装</h1><p>命令：</p>
+<pre><code>make &amp;&amp; make install
+</code></pre><h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h1><p>在/etc/profile 文件结尾中加入配置  ，命令：vim /etc/profile </p>
+<pre><code>#nginx configure
+export NGINX_HOME=/usr/local/nginx
+export PATH=$PATH:$NGINX_HOME/sbin
+</code></pre><p>编译完保存退出并执行 source /etc/profile<br>执行命令 nginx -v 显示nginx 版本号说明环境变量配置成功</p>
+<h1 id="修改nginx-conf"><a href="#修改nginx-conf" class="headerlink" title="修改nginx.conf"></a>修改nginx.conf</h1><p>nginx安装成功后，默认安装路径：/usr/local/nginx,而nginx.conf所在路径：/usr/local/nginx/conf/nginx.conf<br>命令：</p>
+<pre><code>cd /usr/local/nginx/conf
+vi nginx.conf
+</code></pre><p>修改root解析路径为项目路径<br>将user改为root,否则nginx无法访问项目<br>将404.html页面放在项目的根目录下，打开error_page注释<br><img src="/2018/12/29/Centos7上安装和配置Nginx/1.png"></p>
 <h1 id="测试nginx配置以及启动"><a href="#测试nginx配置以及启动" class="headerlink" title="测试nginx配置以及启动"></a>测试nginx配置以及启动</h1><p>nginx -t   测试nginx配置文件<br>nginx    启动nginx<br>ps –ef | grep nginx   查看nginx进程<br>ip:端口号  访问应用,nginx默认端口号是80</p>
 
       

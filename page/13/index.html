@@ -401,6 +401,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="如是我闻">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/psb.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amote">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/" itemprop="url">基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile</a></h1>
+        
+
+        <div class="post-meta">
+		  
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-18T09:05:06+08:00">
+                2018-12-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Jenkins/" itemprop="url" rel="index">
+                    <span itemprop="name">Jenkins</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/" class="leancloud_visitors" data-flag-title="基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          为何要修改官方的Dockerfile？官方的Dockerfile基于jenkins用户,修改后基于root用户,当然这个可以根据自己的需要去做修改，具体可以查看官方Dockerfile文件的注释！Jenkins插件为王，不安装插件基本jenkins就报废。使用官方的Jenkins镜像在启动成功之后访问jenkins会提示安装必要的插件，当然可以略过，进去jenkins之后再选择需要的插件进行安装，但是毕竟插件仓库都在国外，网络不好或者网络限制会造成插件安装失败(我们公司就是！)。基于此,在官方Dockerfile的基础上制作jenkins镜像的时候，可以直接去预装插件！
+注：官方Dockerfile地址 https://github.com/jenkinsci/docker/blob/587b2856cd225bb152c4abeeaaa24934c75aa460/Dockerfile
+
+制作jenkins镜像docker build -t jenkins:2.60.3 .
+注：默认Dockerfile使用的是2.60.3版本jenkins的war包，如果要改变使用的jenkins版本
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/17/Docker搭建mysql数据库/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2018,189 +2193,11 @@ https://kubernetes.io/docs/setup/independent/troubleshooting-kubeadm/
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://amote.xin/2018/12/13/Devops搭建手冊/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="如是我闻">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/psb.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amote">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/13/Devops搭建手冊/" itemprop="url">Devops搭建手冊</a></h1>
-        
-
-        <div class="post-meta">
-		  
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-13T17:35:06+08:00">
-                2018-12-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Devops/" itemprop="url" rel="index">
-                    <span itemprop="name">Devops</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/12/13/Devops搭建手冊/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/13/Devops搭建手冊/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/12/13/Devops搭建手冊/" class="leancloud_visitors" data-flag-title="Devops搭建手冊">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Gitlab安装安装命令dpkg --force-depends -i gitlab-ce_10.3.3-ce.0_amd64.deb
-备份/etc/gitlab/gitlab.rb文件cp gitlab.rb gitlab.rb.bak
-修改/etc/gitlab/gitlab.rb文件external_url &quot;http://gitlab.example.com&quot; 为 external_url &quot;http://ip地址&quot;
-使修改生效sudo gitlab-ctl reconfigure
-默认root账号，需添加密码访问urlip:端口号(默认80)
-Nexus安装创建文件夹cd /usr/localmkdir nexus
-下载Nexus安装包，并解压文件wget https://sonatype-download.global.ssl.fastly.net/nexus/oss/nexus-2.14.8-01-bundle.tar.gztar -xzvf nexus-2.14.8-01-bundle.tar.gz -C nexus
-添加root
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/13/Devops搭建手冊/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2248,7 +2245,7 @@ Nexus安装创建文件夹cd /usr/localmkdir nexus
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">130</span>
+                  <span class="site-state-item-count">131</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

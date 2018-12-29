@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Centos7上安装和配置Nginx]]></title>
+    <url>%2F2018%2F12%2F29%2FCentos7%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AENginx%2F</url>
+    <content type="text"><![CDATA[安装依赖包命令：​ yum -y install gcc pcre-devel openssl openssl-devel 下载nginx包，可以访问可去官网查看nginx包，http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包下载：​ wget http://nginx.org/download/ nginx-1.15.2.tar.gz 解压包：​ tar -xzvf nginx-1.15.2.tar.gz进入解压目录：​ cd nginx-1.15.2 检测安装平台的目标特征，例如检测是否有CC或GCC命令：​ ./configure注意：如果后面还想要配置 SSL 协议(https)，请执行以下命令​ ./configure –prefix=/usr/local/nginx –with-http_stub_status_module –with-http_ssl_module –with-file-aio –with-http_realip_module 编译和安装命令：​ make &amp;&amp; make install​ 配置环境变量在/etc/profile 文件结尾中加入配置 ，命令：vim /etc/profile​ #nginx configure​ export NGINX_HOME=/usr/local/nginx​ export PATH=$PATH:$NGINX_HOME/sbin 编译完保存退出并执行 source /etc/profile执行命令 nginx -v 显示nginx 版本号说明环境变量配置成功 修改nginx.confnginx安装成功后，默认安装路径：/usr/local/nginx,而nginx.conf所在路径：/usr/local/nginx/conf/nginx.conf命令：​ cd /usr/local/nginx/conf​ vi nginx.conf 修改root解析路径为项目路径将user改为root,否则nginx无法访问项目将404.html页面放在项目的根目录下，打开error_page注释 测试nginx配置以及启动nginx -t 测试nginx配置文件nginx 启动nginxps –ef | grep nginx 查看nginx进程ip:端口号 访问应用,nginx默认端口号是80]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>Centos7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Git的SSH认证]]></title>
     <url>%2F2018%2F12%2F29%2FGit%E7%9A%84SSH%E8%AE%A4%E8%AF%81%2F</url>
     <content type="text"><![CDATA[生成SSH密钥$ ssh-keygen -t rsa -C “一般填写邮箱” -t rsa加密方式，默认是dsa，-C 后跟注释信息，这两个参数都可以省略默认生成文件的路径在~/.ssh 目录下 将生成的公钥发送到git服务器上去$ ssh-copy-id -i C:/Users/yourname/.ssh/id_rsa.pub git@server_ip 此时是需要输入对应用户(命令中是git用户)的密码 测试能否登录$ ssh git@server_ip 注意：此时测试登录就不需要输密码了。如果提示输入密码，说明之前的操作不起作用！自行查找原因。。。 Ps: 如果是多个git服务端，重复步骤二即可 服务器端无密码登录跟这个差不多！]]></content>
@@ -1729,9 +1741,9 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Devops</tag>
-        <tag>Docker</tag>
         <tag>Centos7</tag>
+        <tag>Docker</tag>
+        <tag>Devops</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1743,9 +1755,9 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Devops</tag>
-        <tag>Docker</tag>
         <tag>Centos7</tag>
+        <tag>Docker</tag>
+        <tag>Devops</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1757,10 +1769,10 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Devops</tag>
-        <tag>Docker</tag>
-        <tag>Register</tag>
         <tag>Centos7</tag>
+        <tag>Docker</tag>
+        <tag>Devops</tag>
+        <tag>Register</tag>
       </tags>
   </entry>
   <entry>

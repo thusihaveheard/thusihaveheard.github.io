@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2018-12-28T12:48:51.248Z</updated>
+  <updated>2018-12-28T12:26:49.064Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Git的SSH认证</title>
-    <link href="https://amote.xin/2018/12/28/Git%E7%9A%84SSH%E8%AE%A4%E8%AF%81/"/>
-    <id>https://amote.xin/2018/12/28/Git的SSH认证/</id>
-    <published>2018-12-28T12:41:13.000Z</published>
-    <updated>2018-12-28T12:48:51.248Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="生成SSH公钥"><a href="#生成SSH公钥" class="headerlink" title="生成SSH公钥"></a>生成SSH公钥</h1><pre><code>ssh-keygen -t rsa -C “一般填写邮箱”</code></pre><font color="#FF0000"> -t rsa加密方式，默认是dsa，-C 后跟注释信息，这两个参数都可以省略<br>默认生成文件的路径在~/.ssh 目录下</font><br> <br><br># 将生成的公钥发送到对方的git服务器上去<br><br>    ssh-copy-id -i C:/Users/yourname/.ssh/id_rsa.pub git@server_ip<br><br><font color="#FF0000"> 此时是需要输入对应用户(命令中是git用户)的密码</font><br> <br><br># 测试能否登录<br><br>    ssh git@server_ip<br><br> <br><font color="#FF0000"> 注意：此时测试登录就不需要输密码了。如果提示输入密码，说明之前的操作没用成功！自行查找原因。。。</font><p><strong>Ps:</strong></p><ol><li><strong>如果是多个git服务端，重复步骤二即可</strong></li><li><strong>服务器端无密码登录跟这个差不多！</strong></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;生成SSH公钥&quot;&gt;&lt;a href=&quot;#生成SSH公钥&quot; class=&quot;headerlink&quot; title=&quot;生成SSH公钥&quot;&gt;&lt;/a&gt;生成SSH公钥&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;ssh-keygen -t rsa -C “一般填写邮箱”
-&lt;/code&gt;&lt;/pre
-      
-    
-    </summary>
-    
-      <category term="Git" scheme="https://amote.xin/categories/Git/"/>
-    
-    
-      <category term="Git" scheme="https://amote.xin/tags/Git/"/>
-    
-  </entry>
   
   <entry>
     <title>hexo常用命令</title>
@@ -4064,9 +4038,9 @@
       <category term="kubernetes" scheme="https://amote.xin/categories/kubernetes/"/>
     
     
-      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
-    
       <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
+    
+      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
     
       <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
@@ -4095,9 +4069,9 @@
       <category term="kubernetes" scheme="https://amote.xin/categories/kubernetes/"/>
     
     
-      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
-    
       <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
+    
+      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
     
       <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
@@ -4126,9 +4100,9 @@
       <category term="Docker" scheme="https://amote.xin/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
-    
       <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
+    
+      <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
     
       <category term="Register" scheme="https://amote.xin/tags/Register/"/>
     

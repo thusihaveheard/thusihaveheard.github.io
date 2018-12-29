@@ -5,10 +5,10 @@
     <url>%2F2018%2F12%2F29%2FCentos7%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AENginx%2F</url>
     <content type="text"><![CDATA[安装依赖包命令：​ yum -y install gcc pcre-devel openssl openssl-devel 下载nginx包，可以访问可去官网查看nginx包，http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包下载：​ wget http://nginx.org/download/ nginx-1.15.2.tar.gz 解压包：​ tar -xzvf nginx-1.15.2.tar.gz进入解压目录：​ cd nginx-1.15.2 检测安装平台的目标特征，例如检测是否有CC或GCC命令：​ ./configure注意：如果后面还想要配置 SSL 协议(https)，请执行以下命令​ ./configure –prefix=/usr/local/nginx –with-http_stub_status_module –with-http_ssl_module –with-file-aio –with-http_realip_module 编译和安装命令：​ make &amp;&amp; make install​ 配置环境变量在/etc/profile 文件结尾中加入配置 ，命令：vim /etc/profile​ #nginx configure​ export NGINX_HOME=/usr/local/nginx​ export PATH=$PATH:$NGINX_HOME/sbin 编译完保存退出并执行 source /etc/profile执行命令 nginx -v 显示nginx 版本号说明环境变量配置成功 修改nginx.confnginx安装成功后，默认安装路径：/usr/local/nginx,而nginx.conf所在路径：/usr/local/nginx/conf/nginx.conf命令：​ cd /usr/local/nginx/conf​ vi nginx.conf 修改root解析路径为项目路径将user改为root,否则nginx无法访问项目将404.html页面放在项目的根目录下，打开error_page注释 测试nginx配置以及启动nginx -t 测试nginx配置文件nginx 启动nginxps –ef | grep nginx 查看nginx进程ip:端口号 访问应用,nginx默认端口号是80]]></content>
       <categories>
-        <category>Git</category>
+        <category>Nginx</category>
       </categories>
       <tags>
-        <tag>Git</tag>
+        <tag>Nginx</tag>
         <tag>Centos7</tag>
       </tags>
   </entry>
@@ -1677,8 +1677,8 @@
         <category>生活</category>
       </categories>
       <tags>
-        <tag>佛</tag>
         <tag>生活</tag>
+        <tag>佛</tag>
       </tags>
   </entry>
   <entry>
@@ -1742,8 +1742,8 @@
       </categories>
       <tags>
         <tag>Centos7</tag>
-        <tag>Docker</tag>
         <tag>Devops</tag>
+        <tag>Docker</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1756,8 +1756,8 @@
       </categories>
       <tags>
         <tag>Centos7</tag>
-        <tag>Docker</tag>
         <tag>Devops</tag>
+        <tag>Docker</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1770,8 +1770,8 @@
       </categories>
       <tags>
         <tag>Centos7</tag>
-        <tag>Docker</tag>
         <tag>Devops</tag>
+        <tag>Docker</tag>
         <tag>Register</tag>
       </tags>
   </entry>

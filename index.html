@@ -680,7 +680,20 @@
       
         
           
-          
+          FTP上传证书到服务器使用FTP将证书上传到/usr/local/nginx/conf/目录下，并查看
+注意：本实例是采用的阿里云购买的Symantec免费证书，如果自动生成的CSR，会有xxx.key和xxx.pem两个文件，如果是手动生成的CSR,则只有一个文件
+
+修改nginx.conf配置文件
+验证https浏览器以https方式访问应用
+
+补充此时http也是可以访问应用的，如
+
+可以将原来80端口的HTTP方式的访问请求全部转发到443端口上，修改配置文件nginx.conf
+
+在HTTPS server配置404
+
+证书的获取百度云和阿里云购买并下载免费的SSL证书
+
           
           <!--noindex-->
           <div class="post-button text-center">

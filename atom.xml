@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2018-12-29T07:37:01.715Z</updated>
+  <updated>2019-01-02T01:54:31.593Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>百度云和阿里云购买并下载免费的SSL证书</title>
+    <link href="https://amote.xin/2019/01/02/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B0%E5%B9%B6%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9%E7%9A%84SSL%E8%AF%81%E4%B9%A6/"/>
+    <id>https://amote.xin/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/</id>
+    <published>2019-01-02T01:28:39.000Z</published>
+    <updated>2019-01-02T01:54:31.593Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><p>我的域名是在阿里云购买的，服务器是在百度云购买的，搭建的是个人博客，应用服务器是nginx</p><h1 id="百度云"><a href="#百度云" class="headerlink" title="百度云"></a>百度云</h1><p>请按照下图的方式去选择，这样购买的证书是免费的</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" alt="img"></p><p>订单支付成功后，可在订单管理看到记录</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png" alt="img"></p><p>在已购证书列表，申请证书</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image003.png" alt="img"></p><p>填写域名以及其他信息，验证方式选择DNS验证，点击提交</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image004.png" alt="img"></p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image005.png" alt="img"></p><p>在已购证书列表里，点击查看申请</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image006.png" alt="img"></p><p>域名验证-具体操作里可看到:名称、设置值、请前往域名注册商添加TXT解析记录。名称、设置值下一步要用到</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image007.png" alt="img"></p><p>前往阿里云，添加TXT解析记录，主机记录填写上一步的名称，记录值填写上一步的设置值，点击确定</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image008.png" alt="img"></p><p>查看添加的TXT解析记录</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image009.png" alt="img"></p><p>别急，出去抽根烟…，回来后继续在百度云上查看已购证书列表</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image010.png" alt="img"></p><p>愉快的点击查看证书，并下载证书，下载的时候选择对应的证书格式。我下载的是PEM_Nginx格式，因为我的应用服务器是nginx</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image011.png" alt="img"></p><p>查看证书</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image012.png" alt="img"></p><h1 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h1><p>购买证书</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image013.png" alt="img"></p><p>按下图方式选择</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image014.png" alt="img"></p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image015.png" alt="img"></p><p>填写申请，绑定域名，域名验证方式选择自动DNS验证，CSR选择系统生成 ，点击下一步</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image016.png" alt="img"></p><p>点击验证</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image017.png" alt="img"></p><p>点击提交审核</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image018.png" alt="img"></p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image019.png" alt="img"></p><p>因为域名是在阿里云注册的，选择的是自动DNS验证，在域名的解析记录里会自动添加一条TXT验证记录</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image020.png" alt="img"></p><p>稍等片刻，再出去抽根烟。。。，然后在SSL证书页面，可查看到已签发的证书，最后选择对应的应用服务器类型证书进行下载</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image021.png" alt="img"></p><p>查看证书</p><p><img src="file:///C:\Users\SHUAIC~1\AppData\Local\Temp\msohtmlclip1\01\clip_image022.png" alt="img"></p><h1 id="SSL证书的使用"><a href="#SSL证书的使用" class="headerlink" title="SSL证书的使用"></a>SSL证书的使用</h1><p>Nginx配置HTTPS</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h1&gt;&lt;p&gt;我的域名是在阿里云购买的，服务器是在百度云购买的，搭建的是个人博客，应用服务器是nginx&lt;/p&gt;
+&lt;h1 id=&quot;百度云&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+      <category term="网络" scheme="https://amote.xin/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="HTTPS" scheme="https://amote.xin/categories/%E7%BD%91%E7%BB%9C/HTTPS/"/>
+    
+    
+      <category term="SSL" scheme="https://amote.xin/tags/SSL/"/>
+    
+      <category term="HTTPS" scheme="https://amote.xin/tags/HTTPS/"/>
+    
+      <category term="网络" scheme="https://amote.xin/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Centos7上安装和配置Nginx</title>
     <link href="https://amote.xin/2018/12/29/Centos7%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AENginx/"/>
     <id>https://amote.xin/2018/12/29/Centos7上安装和配置Nginx/</id>
     <published>2018-12-29T06:54:27.000Z</published>
-    <updated>2018-12-29T07:37:01.715Z</updated>
+    <updated>2018-12-29T07:38:14.851Z</updated>
     
     <content type="html"><![CDATA[<h1 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h1><pre><code>yum -y install gcc pcre-devel openssl openssl-devel   </code></pre><h1 id="下载nginx包，可以访问"><a href="#下载nginx包，可以访问" class="headerlink" title="下载nginx包，可以访问"></a>下载nginx包，可以访问</h1><p>可去官网查看nginx包，<a href="http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包" target="_blank" rel="noopener">http://nginx.org/download/(或者http://nginx.org)，选择要下载的tar.gz包</a><br>命令:<br>​    wget <a href="http://nginx.org/download/" target="_blank" rel="noopener">http://nginx.org/download/</a> nginx-1.15.2.tar.gz</p><p>解压包：</p><pre><code>tar -xzvf  nginx-1.15.2.tar.gz</code></pre><p>进入解压目录：</p><pre><code>cd nginx-1.15.2</code></pre><h1 id="检测安装平台的目标特征，例如检测是否有CC或GCC"><a href="#检测安装平台的目标特征，例如检测是否有CC或GCC" class="headerlink" title="检测安装平台的目标特征，例如检测是否有CC或GCC"></a>检测安装平台的目标特征，例如检测是否有CC或GCC</h1><p>命令：</p><pre><code>./configure</code></pre><font color="#FF0000">注意：如果后面还想要配置 SSL 协议(https)，请执行以下命令</font><pre><code>./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-file-aio --with-http_realip_module</code></pre><h1 id="编译和安装"><a href="#编译和安装" class="headerlink" title="编译和安装"></a>编译和安装</h1><p>命令：</p><pre><code>make &amp;&amp; make install</code></pre><h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h1><p>在/etc/profile 文件结尾中加入配置  ，命令：vim /etc/profile </p><pre><code>#nginx configureexport NGINX_HOME=/usr/local/nginxexport PATH=$PATH:$NGINX_HOME/sbin</code></pre><p>编译完保存退出并执行 source /etc/profile<br>执行命令 nginx -v 显示nginx 版本号说明环境变量配置成功</p><h1 id="修改nginx-conf"><a href="#修改nginx-conf" class="headerlink" title="修改nginx.conf"></a>修改nginx.conf</h1><p>nginx安装成功后，默认安装路径：/usr/local/nginx,而nginx.conf所在路径：/usr/local/nginx/conf/nginx.conf<br>命令：</p><pre><code>cd /usr/local/nginx/confvi nginx.conf</code></pre><p>修改root解析路径为项目路径<br>将user改为root,否则nginx无法访问项目<br>将404.html页面放在项目的根目录下，打开error_page注释<br><img src="/2018/12/29/Centos7上安装和配置Nginx/1.png"></p><h1 id="测试nginx配置以及启动"><a href="#测试nginx配置以及启动" class="headerlink" title="测试nginx配置以及启动"></a>测试nginx配置以及启动</h1><p>nginx -t   测试nginx配置文件<br>nginx    启动nginx<br>ps –ef | grep nginx   查看nginx进程<br>ip:端口号  访问应用,nginx默认端口号是80</p>]]></content>
     
@@ -3930,9 +3962,9 @@
       <category term="生活" scheme="https://amote.xin/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="https://amote.xin/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="佛" scheme="https://amote.xin/tags/%E4%BD%9B/"/>
+    
+      <category term="生活" scheme="https://amote.xin/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amote.xin/"/>
-  <updated>2019-01-02T02:43:17.347Z</updated>
+  <updated>2019-01-02T03:02:38.120Z</updated>
   <id>https://amote.xin/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://amote.xin/2019/01/02/Nginx%E9%85%8D%E7%BD%AEHTTPS/"/>
     <id>https://amote.xin/2019/01/02/Nginx配置HTTPS/</id>
     <published>2019-01-02T02:10:16.000Z</published>
-    <updated>2019-01-02T02:43:17.347Z</updated>
+    <updated>2019-01-02T03:02:38.120Z</updated>
     
     <content type="html"><![CDATA[<h1 id="FTP上传证书到服务器"><a href="#FTP上传证书到服务器" class="headerlink" title="FTP上传证书到服务器"></a>FTP上传证书到服务器</h1><p>使用FTP将证书上传到/usr/local/nginx/conf/目录下，并查看<br><img src="/2019/01/02/Nginx配置HTTPS/1.png"></p><font color="#FF0000">注意：本实例是采用的阿里云购买的Symantec免费证书，如果自动生成的CSR，会有xxx.key和xxx.pem两个文件，如果是手动生成的CSR,则只有一个文件</font><h1 id="修改nginx-conf配置文件"><a href="#修改nginx-conf配置文件" class="headerlink" title="修改nginx.conf配置文件"></a>修改<code>nginx.conf</code>配置文件</h1><img src="/2019/01/02/Nginx配置HTTPS/2.png"><h1 id="验证https"><a href="#验证https" class="headerlink" title="验证https"></a>验证https</h1><p>浏览器以https方式访问应用</p><img src="/2019/01/02/Nginx配置HTTPS/3.png"><h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>此时http也是可以访问应用的，如</p><img src="/2019/01/02/Nginx配置HTTPS/4.png"><p>可以将原来80端口的HTTP方式的访问请求全部转发到443端口上，修改配置文件<code>nginx.conf</code></p><img src="/2019/01/02/Nginx配置HTTPS/5.png"><p>在HTTPS server配置404</p><img src="/2019/01/02/Nginx配置HTTPS/6.png"><h1 id="证书的获取"><a href="#证书的获取" class="headerlink" title="证书的获取"></a>证书的获取</h1><p><a href="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书" style="color:#FF0000">百度云和阿里云购买并下载免费的SSL证书</a></p>]]></content>
     
@@ -34,6 +34,14 @@
     
     </summary>
     
+      <category term="Nginx" scheme="https://amote.xin/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="https://amote.xin/tags/Nginx/"/>
+    
+      <category term="HTTPS" scheme="https://amote.xin/tags/HTTPS/"/>
+    
+      <category term="网络" scheme="https://amote.xin/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
@@ -42,7 +50,7 @@
     <link href="https://amote.xin/2019/01/02/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B0%E5%B9%B6%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9%E7%9A%84SSL%E8%AF%81%E4%B9%A6/"/>
     <id>https://amote.xin/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/</id>
     <published>2019-01-02T01:28:39.000Z</published>
-    <updated>2019-01-02T02:33:18.219Z</updated>
+    <updated>2019-01-02T02:57:27.873Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><font color="#FF0000">我的域名是在阿里云购买的，服务器是在百度云购买的，搭建的是个人博客，应用服务器是nginx</font><h1 id="百度云"><a href="#百度云" class="headerlink" title="百度云"></a>百度云</h1><p>请按照下图的方式去选择，这样购买的证书是免费的</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/1.png"><p>订单支付成功后，可在订单管理看到记录</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/2.png"><p>在已购证书列表，申请证书</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/3.png"><p>填写域名以及其他信息，验证方式选择DNS验证，点击提交</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/4.png"><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/5.png"><p>在已购证书列表里，点击查看申请</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/6.png"><p>域名验证-具体操作里可看到:名称、设置值、请前往域名注册商添加TXT解析记录。名称、设置值下一步要用到</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/7.png"><p>前往阿里云，添加TXT解析记录，主机记录填写上一步的名称，记录值填写上一步的设置值，点击确定</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/8.png"><p>查看添加的TXT解析记录</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/9.png"><p>别急，出去抽根烟…，回来后继续在百度云上查看已购证书列表</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/10.png"><p>愉快的点击查看证书，并下载证书，下载的时候选择对应的证书格式。我下载的是PEM_Nginx格式，因为我的应用服务器是nginx</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/11.png"><p>查看证书</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/12.png"><h1 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h1><p>购买证书</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/13.png"><p>按下图方式选择</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/14.png"><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/15.png"><p>填写申请，绑定域名，域名验证方式选择自动DNS验证，CSR选择系统生成 ，点击下一步</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/16.png"><p>点击验证</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/17.png"><p>点击提交审核</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/18.png"><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/19.png"><p>因为域名是在阿里云注册的，选择的是自动DNS验证，在域名的解析记录里会自动添加一条TXT验证记录</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/20.png"><p>稍等片刻，再出去抽根烟。。。，然后在SSL证书页面，可查看到已签发的证书，最后选择对应的应用服务器类型证书进行下载</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/21.png"><p>查看证书</p><img src="/2019/01/02/百度云和阿里云购买并下载免费的SSL证书/22.png"><h1 id="SSL证书的使用"><a href="#SSL证书的使用" class="headerlink" title="SSL证书的使用"></a>SSL证书的使用</h1><p><font color="#FF0000">这种证书一年就会失效，记得更换，当然也可以自己直接去制作证书</font><br><a href="/2019/01/02/Nginx配置HTTPS" style="color:#FF0000">Nginx配置HTTPS</a></p>]]></content>
     
@@ -60,11 +68,11 @@
       <category term="HTTPS" scheme="https://amote.xin/categories/%E7%BD%91%E7%BB%9C/HTTPS/"/>
     
     
-      <category term="SSL" scheme="https://amote.xin/tags/SSL/"/>
-    
       <category term="HTTPS" scheme="https://amote.xin/tags/HTTPS/"/>
     
       <category term="网络" scheme="https://amote.xin/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="SSL" scheme="https://amote.xin/tags/SSL/"/>
     
   </entry>
   
@@ -3885,9 +3893,9 @@
     <link href="https://amote.xin/2018/12/18/%E5%9F%BA%E4%BA%8Ejenkins%E5%AE%98%E6%96%B9%E7%9A%84Dockerfile%E4%BF%AE%E6%94%B9%E4%B9%8B%E5%90%8E%E9%A2%84%E8%A3%85%E9%95%9C%E5%83%8F%E7%9A%84Dockerfile/"/>
     <id>https://amote.xin/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/</id>
     <published>2018-12-18T01:05:06.000Z</published>
-    <updated>2018-12-18T02:26:28.953Z</updated>
+    <updated>2019-01-02T02:57:15.636Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="为何要修改官方的Dockerfile？"><a href="#为何要修改官方的Dockerfile？" class="headerlink" title="为何要修改官方的Dockerfile？"></a>为何要修改官方的Dockerfile？</h1><p>官方的Dockerfile基于jenkins用户,修改后基于root用户,当然这个可以根据自己的需要去做修改，具体可以查看官方Dockerfile文件的注释！<br>Jenkins插件为王，不安装插件基本jenkins就报废。使用官方的Jenkins镜像在启动成功之后访问jenkins会提示安装必要的插件，当然可以略过，进去jenkins之后再选择需要的插件进行安装，但是毕竟插件仓库都在国外，网络不好或者网络限制会造成插件安装失败(我们公司就是！)。基于此,在官方Dockerfile的基础上制作jenkins镜像的时候，可以直接去预装插件！</p><font color="#FF0000">注：官方Dockerfile地址 <a href="https://github.com/jenkinsci/docker/blob/587b2856cd225bb152c4abeeaaa24934c75aa460/Dockerfile" target="_blank" rel="noopener">https://github.com/jenkinsci/docker/blob/587b2856cd225bb152c4abeeaaa24934c75aa460/Dockerfile</a></font><h1 id="制作jenkins镜像"><a href="#制作jenkins镜像" class="headerlink" title="制作jenkins镜像"></a>制作jenkins镜像</h1><p>docker build -t jenkins:2.60.3 .<br><img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/1.png"><br><img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/2.png"></p><font color="#FF0000">注：默认Dockerfile使用的是2.60.3版本jenkins的war包，如果要改变使用的jenkins版本，在build的镜像通过参数–build-arg JENKINS_VERSION =版本号 传递<br>如：docker build -t jenkins:2.60.3 –build-arg JENKINS_VERSION = 2.99 .<br>但是不同的jenkins版本基于的jdk版本不一样，Dockerfile的基类镜像是openjdk8的</font><h1 id="启动jenkins镜像"><a href="#启动jenkins镜像" class="headerlink" title="启动jenkins镜像"></a>启动jenkins镜像</h1><p>docker run –d -p 8088:8080 -p 50000:50000 –restart=always –name myjenkins -u root -v /var/jenkins_home:/var/jenkins_home 镜像id(或者repository:tag)<br>-d后台启动，-p映射端口号, –restart=always自动重启， –name容器名称， –u使用什么账号运行，-v挂载目录<br><img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/4.png"></p><h1 id="查看jenkins日志，并获取初始化admin用户的密码"><a href="#查看jenkins日志，并获取初始化admin用户的密码" class="headerlink" title="查看jenkins日志，并获取初始化admin用户的密码"></a>查看jenkins日志，并获取初始化admin用户的密码</h1><p>docker logs -f 0ad214f3c2c2<br>-f 查看实时日志，0ad214f3c2c2 容器id<br><img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/5.png"><br><img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/6.png"></p><font color="#FF0000">注：如果密码在日志里没有查到，可以去查找/var/jenkins_home/secrets/initialAdminPassword<br>文件，此文件已挂载到宿主机</font><h1 id="浏览器访问jenkins"><a href="#浏览器访问jenkins" class="headerlink" title="浏览器访问jenkins"></a>浏览器访问jenkins</h1> <img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/7.png"><p>输入上一步获取到的密码，点击Continue<br> <img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/8.png"><br>选择Install suggested plugins,进入后会看到插件都已安装上，忘记截图了！</p><h1 id="如何制作plugins-txt"><a href="#如何制作plugins-txt" class="headerlink" title="如何制作plugins.txt"></a>如何制作plugins.txt</h1><p>方法一：1.安装jenkins<br>2.安装需要的插件<br>3.导入已安装的插件到plugins.txt<br>curl -sSL “<a href="http://username:password@myhost.com:port/pluginManager/api/xml?depth=1&amp;xpath=/*/*/shortName|/*/*/version&amp;wrapper=plugins&quot;" target="_blank" rel="noopener">http://username:password@myhost.com:port/pluginManager/api/xml?depth=1&amp;xpath=/*/*/shortName|/*/*/version&amp;wrapper=plugins&quot;</a> | perl -pe ‘s/.<em>?<shortname>([\w-]+).</shortname></em>?<version>([^&lt;]+)()(&lt;\/\w+&gt;)+/\1 \2\n/g’|sed ‘s/ /:/‘ &gt; plugins.txt</version></p><p>方法二：1.创建空的plugins.txt<br>        2.打开plugins.txt文件，并填写插件名称，以及对应版本号<br> </p><p><font color="#FF0000">建议使用方法一！</font></p><h1 id="所需资源下载"><a href="#所需资源下载" class="headerlink" title="所需资源下载"></a>所需资源下载</h1><p><a href="jenkins.zip" style="color:#FF0000">相关资源</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="为何要修改官方的Dockerfile？"><a href="#为何要修改官方的Dockerfile？" class="headerlink" title="为何要修改官方的Dockerfile？"></a>为何要修改官方的Dockerfile？</h1><p>官方的Dockerfile基于jenkins用户,修改后基于root用户,当然这个可以根据自己的需要去做修改，具体可以查看官方Dockerfile文件的注释！<br>Jenkins插件为王，不安装插件基本jenkins就报废。使用官方的Jenkins镜像在启动成功之后访问jenkins会提示安装必要的插件，当然可以略过，进去jenkins之后再选择需要的插件进行安装，但是毕竟插件仓库都在国外，网络不好或者网络限制会造成插件安装失败(我们公司就是！)。基于此,在官方Dockerfile的基础上制作jenkins镜像的时候，可以直接去预装插件！</p><font color="#FF0000">注：官方Dockerfile地址 <a href="https://github.com/jenkinsci/docker/blob/587b2856cd225bb152c4abeeaaa24934c75aa460/Dockerfile" target="_blank" rel="noopener">https://github.com/jenkinsci/docker/blob/587b2856cd225bb152c4abeeaaa24934c75aa460/Dockerfile</a></font><h1 id="制作jenkins镜像"><a href="#制作jenkins镜像" class="headerlink" title="制作jenkins镜像"></a>制作jenkins镜像</h1><p>docker build -t jenkins:2.60.3 .<br><img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/1.png"><br><img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/2.png"></p><font color="#FF0000">注：默认Dockerfile使用的是2.60.3版本jenkins的war包，如果要改变使用的jenkins版本，在build的镜像通过参数–build-arg JENKINS_VERSION =版本号 传递<br>如：docker build -t jenkins:2.60.3 –build-arg JENKINS_VERSION = 2.99 .<br>但是不同的jenkins版本基于的jdk版本不一样，Dockerfile的基类镜像是openjdk8的</font><h1 id="启动jenkins镜像"><a href="#启动jenkins镜像" class="headerlink" title="启动jenkins镜像"></a>启动jenkins镜像</h1><p>docker run –d -p 8088:8080 -p 50000:50000 –restart=always –name myjenkins -u root -v /var/jenkins_home:/var/jenkins_home 镜像id(或者repository:tag)<br>-d后台启动，-p映射端口号, –restart=always自动重启， –name容器名称， –u使用什么账号运行，-v挂载目录<br><img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/4.png"></p><h1 id="查看jenkins日志，并获取初始化admin用户的密码"><a href="#查看jenkins日志，并获取初始化admin用户的密码" class="headerlink" title="查看jenkins日志，并获取初始化admin用户的密码"></a>查看jenkins日志，并获取初始化admin用户的密码</h1><p>docker logs -f 0ad214f3c2c2<br>-f 查看实时日志，0ad214f3c2c2 容器id<br><img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/5.png"><br><img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/6.png"></p><font color="#FF0000">注：如果密码在日志里没有查到，可以去查找/var/jenkins_home/secrets/initialAdminPassword<br>文件，此文件已挂载到宿主机</font><h1 id="浏览器访问jenkins"><a href="#浏览器访问jenkins" class="headerlink" title="浏览器访问jenkins"></a>浏览器访问jenkins</h1> <img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/7.png"><p>输入上一步获取到的密码，点击Continue<br> <img src="/2018/12/18/基于jenkins官方的Dockerfile修改之后预装镜像的Dockerfile/8.png"><br>选择Install suggested plugins,进入后会看到插件都已安装上，忘记截图了！</p><h1 id="如何制作plugins-txt"><a href="#如何制作plugins-txt" class="headerlink" title="如何制作plugins.txt"></a>如何制作plugins.txt</h1><p>方法一：1.安装jenkins<br>2.安装需要的插件<br>3.导入已安装的插件到plugins.txt<br>curl -sSL “<a href="http://username:password@myhost.com:port/pluginManager/api/xml?depth=1&amp;xpath=/*/*/shortName|/*/*/version&amp;wrapper=plugins&quot;" target="_blank" rel="noopener">http://username:password@myhost.com:port/pluginManager/api/xml?depth=1&amp;xpath=/*/*/shortName|/*/*/version&amp;wrapper=plugins&quot;</a> | perl -pe ‘s/.<em>?<shortname>([\w-]+).</shortname></em>?<version>([^&lt;]+)()(&lt;\/\w+&gt;)+/\1 \2\n/g’|sed ‘s/ /:/‘ &gt; plugins.txt</version></p><p>方法二：1.创建空的plugins.txt<br>​        2.打开plugins.txt文件，并填写插件名称，以及对应版本号<br> </p><p><font color="#FF0000">建议使用方法一！</font></p><h1 id="所需资源下载"><a href="#所需资源下载" class="headerlink" title="所需资源下载"></a>所需资源下载</h1><p><a href="jenkins.zip" style="color:#FF0000">相关资源</a></p>]]></content>
     
     <summary type="html">
     
@@ -4143,11 +4151,11 @@
       <category term="kubernetes" scheme="https://amote.xin/categories/kubernetes/"/>
     
     
-      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
-    
       <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
+    
+      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
       <category term="kubernetes" scheme="https://amote.xin/tags/kubernetes/"/>
     
@@ -4174,11 +4182,11 @@
       <category term="kubernetes" scheme="https://amote.xin/categories/kubernetes/"/>
     
     
-      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
-    
       <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
+    
+      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
       <category term="kubernetes" scheme="https://amote.xin/tags/kubernetes/"/>
     
@@ -4205,11 +4213,11 @@
       <category term="Docker" scheme="https://amote.xin/categories/Docker/"/>
     
     
-      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
-    
       <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
+    
+      <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
       <category term="Register" scheme="https://amote.xin/tags/Register/"/>
     

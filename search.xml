@@ -16,7 +16,7 @@
   <entry>
     <title><![CDATA[百度云和阿里云购买并下载免费的SSL证书]]></title>
     <url>%2F2019%2F01%2F02%2F%E7%99%BE%E5%BA%A6%E4%BA%91%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B0%E5%B9%B6%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9%E7%9A%84SSL%E8%AF%81%E4%B9%A6%2F</url>
-    <content type="text"><![CDATA[前提我的域名是在阿里云购买的，服务器是在百度云购买的，搭建的是个人博客，应用服务器是nginx 百度云请按照下图的方式去选择，这样购买的证书是免费的 订单支付成功后，可在订单管理看到记录 在已购证书列表，申请证书 填写域名以及其他信息，验证方式选择DNS验证，点击提交 在已购证书列表里，点击查看申请 域名验证-具体操作里可看到:名称、设置值、请前往域名注册商添加TXT解析记录。名称、设置值下一步要用到 前往阿里云，添加TXT解析记录，主机记录填写上一步的名称，记录值填写上一步的设置值，点击确定 查看添加的TXT解析记录 别急，出去抽根烟…，回来后继续在百度云上查看已购证书列表 愉快的点击查看证书，并下载证书，下载的时候选择对应的证书格式。我下载的是PEM_Nginx格式，因为我的应用服务器是nginx 查看证书 阿里云购买证书 按下图方式选择 填写申请，绑定域名，域名验证方式选择自动DNS验证，CSR选择系统生成 ，点击下一步 点击验证 点击提交审核 因为域名是在阿里云注册的，选择的是自动DNS验证，在域名的解析记录里会自动添加一条TXT验证记录 稍等片刻，再出去抽根烟。。。，然后在SSL证书页面，可查看到已签发的证书，最后选择对应的应用服务器类型证书进行下载 查看证书 SSL证书的使用这种证书一年就会失效，记得更换，当然也可以自己直接去制作证书Nginx配置HTTPS]]></content>
+    <content type="text"><![CDATA[前提我的域名是在阿里云购买的，服务器是在百度云购买的，搭建的是个人博客，应用服务器是nginx 百度云请按照下图的方式去选择，这样购买的证书是免费的 订单支付成功后，可在订单管理看到记录 在已购证书列表，申请证书 填写域名以及其他信息，验证方式选择DNS验证，点击提交 在已购证书列表里，点击查看申请 域名验证-具体操作里可看到:名称、设置值、请前往域名注册商添加TXT解析记录。名称、设置值下一步要用到 前往阿里云，添加TXT解析记录，主机记录填写上一步的名称，记录值填写上一步的设置值，点击确定 查看添加的TXT解析记录 别急，出去抽根烟…，回来后继续在百度云上查看已购证书列表 愉快的点击查看证书，并下载证书，下载的时候选择对应的证书格式。我下载的是PEM_Nginx格式，因为我的应用服务器是nginx 查看证书 阿里云购买证书 按下图方式选择 填写申请，绑定域名，域名验证方式选择自动DNS验证，CSR选择系统生成 ，点击下一步 点击验证 点击提交审核 因为域名是在阿里云注册的，选择的是自动DNS验证，在域名的解析记录里会自动添加一条TXT验证记录 稍等片刻，再出去抽根烟。。。，然后在SSL证书页面，可查看到已签发的证书，最后选择对应的应用服务器类型证书进行下载 查看证书 SSL证书的使用这种证书一年就会失效，记得更换。 或者通过openssl自己制作证书，参考：https://www.cnblogs.com/weifeng1463/p/7943633.html。 或者去创建免费SSL证书的网站，如：https://freessl.cn/Nginx配置HTTPS]]></content>
       <categories>
         <category>网络</category>
         <category>HTTPS</category>
@@ -1704,8 +1704,8 @@
         <category>生活</category>
       </categories>
       <tags>
-        <tag>生活</tag>
         <tag>佛</tag>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -1768,9 +1768,9 @@
         <category>kubernetes</category>
       </categories>
       <tags>
+        <tag>Docker</tag>
         <tag>Centos7</tag>
         <tag>Devops</tag>
-        <tag>Docker</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1782,9 +1782,9 @@
         <category>kubernetes</category>
       </categories>
       <tags>
+        <tag>Docker</tag>
         <tag>Centos7</tag>
         <tag>Devops</tag>
-        <tag>Docker</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1796,9 +1796,9 @@
         <category>Docker</category>
       </categories>
       <tags>
+        <tag>Docker</tag>
         <tag>Centos7</tag>
         <tag>Devops</tag>
-        <tag>Docker</tag>
         <tag>Register</tag>
       </tags>
   </entry>

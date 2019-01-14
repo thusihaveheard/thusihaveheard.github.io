@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "457ff2f1"
+    });
+  daovoice('update');
+  </script>
+
+
+
+  <span id="musicControl">
+	<a id="mc_play" class="stop" onclick="play_music();">
+		<audio id="musicfx" loop="loop" autoplay="autoplay">
+			<source src="music/love story.mp3" type="audio/mpeg">
+		</audio>
+	</a>
+  </span>
+  
+  <script>
+		function play_music(){
+			if ($('#mc_play').hasClass('on')){
+				$('#mc_play audio').get(0).pause();
+				$('#mc_play').attr('class','stop');
+			}else{
+				$('#mc_play audio').get(0).play();
+				$('#mc_play').attr('class','on');
+			}
+			$('#music_play_filter').hide();
+			event.stopPropagation(); //阻止冒泡
+		}
+		function just_play(id){
+			$('#mc_play audio').get(0).play();
+			$('#mc_play').attr('class','on');
+			if (typeof(id)!='undefined'){
+				$('#music_play_filter').hide();
+			}
+			event.stopPropagation(); //阻止冒泡
+		}
+		function is_weixn(){
+			return false;
+			var ua = navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i)=="micromessenger") {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		var play_filter=document.getElementById('music_play_filter');
+		play_filter.addEventListener('click', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('touchstart', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('touchend', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('touchmove', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('mousedown', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('mouseup', function(){
+			just_play(1);
+		});
+		play_filter.addEventListener('mousemove',function(){
+			just_play(1);
+		});
+		window.onload=function(){
+			if (!is_weixn()){
+				just_play();
+			}
+		}
+	</script>
+  
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="明朝,屠城,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Amote" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="己酉夏四月十四日，督镇史可法从白洋河失守，跄跄奔扬州，闭城御敌。至二十四日未破城前，禁门之内各有兵守；予住宅新城东，杨姓将守焉。吏卒碁置，予宅寓有二卒，左右邻舍亦然，践踏无所不至；供给日费钱千余，将不能继。不得已，共谋为主者觞。予更谬为恭敬，酬好渐洽。主者喜，诫卒稍远去。主者喜音律、善琵琶，思得名妓以娱军暇。是夕，邀予饮，满拟纵欢；忽督镇以寸纸至，主者览之色变，遽登城，余众亦散去。　　越次早，督镇">
+<meta name="keywords" content="明朝,屠城">
+<meta property="og:type" content="article">
+<meta property="og:title" content="扬州十日记——明·王秀楚">
+<meta property="og:url" content="https://amote.xin/2019/01/14/扬州十日记——明·王秀楚/index.html">
+<meta property="og:site_name" content="Amote">
+<meta property="og:description" content="己酉夏四月十四日，督镇史可法从白洋河失守，跄跄奔扬州，闭城御敌。至二十四日未破城前，禁门之内各有兵守；予住宅新城东，杨姓将守焉。吏卒碁置，予宅寓有二卒，左右邻舍亦然，践踏无所不至；供给日费钱千余，将不能继。不得已，共谋为主者觞。予更谬为恭敬，酬好渐洽。主者喜，诫卒稍远去。主者喜音律、善琵琶，思得名妓以娱军暇。是夕，邀予饮，满拟纵欢；忽督镇以寸纸至，主者览之色变，遽登城，余众亦散去。　　越次早，督镇">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-14T12:26:07.921Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="扬州十日记——明·王秀楚">
+<meta name="twitter:description" content="己酉夏四月十四日，督镇史可法从白洋河失守，跄跄奔扬州，闭城御敌。至二十四日未破城前，禁门之内各有兵守；予住宅新城东，杨姓将守焉。吏卒碁置，予宅寓有二卒，左右邻舍亦然，践踏无所不至；供给日费钱千余，将不能继。不得已，共谋为主者觞。予更谬为恭敬，酬好渐洽。主者喜，诫卒稍远去。主者喜音律、善琵琶，思得名妓以娱军暇。是夕，邀予饮，满拟纵欢；忽督镇以寸纸至，主者览之色变，遽登城，余众亦散去。　　越次早，督镇">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://amote.xin/2019/01/14/扬州十日记——明·王秀楚/">
+
+
+
+
+
+  <title>扬州十日记——明·王秀楚 | Amote</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	
+	<a href="https://github.com/thusihaveheard" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+   
+	<header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Amote</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-书">
+          <a href="/books/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            书
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-电影">
+          <a href="/movies/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-film"></i> <br>
+            
+            电影
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+
+<script>
+    
+    window.onload = function(){
+        var path = 'https://amote.xin'; //这里要改成你博客的地址
+        var localhostItem = String(window.location).split(path)[1];
+        var LiNode = document.querySelectorAll('#menu > li > a')
+        
+        for(var i = 0; i< LiNode.length;i++){
+            var item = String(LiNode[i].href).split(path)[1];
+            if(item == localhostItem && item != undefined){
+                LiNode[i].setAttribute('style','border-bottom:1px solid black');
+            }
+        }
+    };
+
+</script> </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://amote.xin/2019/01/14/扬州十日记——明·王秀楚/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="如是我闻">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/psb.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amote">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">扬州十日记——明·王秀楚</h1>
+        
+
+        <div class="post-meta">
+		  
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-14T20:23:09+08:00">
+                2019-01-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/文学/" itemprop="url" rel="index">
+                    <span itemprop="name">文学</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/文学/古文/" itemprop="url" rel="index">
+                    <span itemprop="name">古文</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/14/扬州十日记——明·王秀楚/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/14/扬州十日记——明·王秀楚/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/14/扬州十日记——明·王秀楚/" class="leancloud_visitors" data-flag-title="扬州十日记——明·王秀楚">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>己酉夏四月十四日，督镇史可法从白洋河失守，跄跄奔扬州，闭城御敌。至二十四日未破城前，禁门之内各有兵守；予住宅新城东，杨姓将守焉。吏卒碁置，予宅寓有二卒，左右邻舍亦然，践踏无所不至；供给日费钱千余，将不能继。不得已，共谋为主者觞。予更谬为恭敬，酬好渐洽。主者喜，诫卒稍远去。主者喜音律、善琵琶，思得名妓以娱军暇。是夕，邀予饮，满拟纵欢；忽督镇以寸纸至，主者览之色变，遽登城，余众亦散去。<br>　　越次早，督镇牌谕至，内有「一人当之，不累百姓」之语；闻者莫不感泣。又传巡军小捷，人人加额焉。午后，有姻氏自瓜洲来，避兴平伯逃兵（兴平伯，高杰也；督镇檄之，出城远避）；予妇缘久别，相见唏嘘。而大兵入城之语，已有一二为予言者。予急出，询诸人，或曰：靖南侯黄得功援兵至。旋观城上守城者，尚严整。再至市上，人言汹汹，披发跣足者继尘而至。问之，心急口喘，莫知所对。忽数十骑自北而南，奔腾狼狈，势如波涌；中拥一人，则督镇也。盖奔东城，外兵逼近，不能出；欲奔南关，故由此。是时，始知敌兵入城无疑矣。突有一骑自南而北，撤缰缓步，仰面哀号；马前二卒，依依辔首不舍。至今犹然在目，恨未传其姓字也。骑稍远，守城丁纷纷下窜，弃胄抛戈，有碎首折胫者；回视城橹已一空矣。先是，督镇以城狭，炮不得展；城垛设一板，前置城径、后接民居，使有余地得便安置。至是，工未毕；敌兵操弧先登者，白刃乱下。守城兵互相拥挤，前路逼塞，皆奔；所置木板，匐匐扳援，得及民屋。新板不固，托足即倾；人如落叶，死者十八、九。其及屋者，足踏瓦裂，皆作剑戟相击声；又如雨雹挟弹，铿然、鞫然，四响不绝。屋中人惶骇而出，不知所为；而堂室内外、深至寝闼，皆守城兵民缘屋下者，惶惶觅隙潜匿，主人弗能呵止。外厢比屋闭户，人烟屏息。予厅后面城墙，从牕隙外觑，见城上兵循南而西，步武严整，淋雨亦不少紊，疑为节制之师，心稍定。忽叩门声急，则邻人相约共迎王师，设案焚香，示不敢抗。予知事已不济如此，然不能拂众议，姑连应曰：唯唯。于是，改换服色，引领而待。良久不至，予复至后牕窥城上，则队伍稍疏，或行或止。俄见有拥妇女杂行其间，服饰皆扬俗。予始大骇，还语妇曰：兵入城，倘有不测，尔当自裁。妇曰：诺。有金若干，付汝收藏；我辈休想复生人世矣。涕泣交下，尽出金付予。值乡人进，急呼曰：至矣！至矣！予趋出，望北来数骑皆按辔徐行，遇迎王师者即俯首若有所语。是时，人自为守，往来不通；虽相达咫尺，而声息莫闻。迄稍近，始知为逐户索金也。然意颇不奢，稍有所得，即置不问；或有不应，虽操刀相向，尚不及人（后乃知有捐金万两相献而卒受毙者，扬人导之也）。次及予门，一骑独指予，呼后骑曰：为我索此蓝衣者。后骑方舍辔而予已飞遁矣，后骑遂弃余上马去。予心计曰：我粗服类乡人，何独欲予？予弟至、予兄亦至，因同谋曰：此居左右皆富贾，彼亦将富贾视我，奈何！遂急从僻径，托伯兄弟扶妇女，冒雨至仲兄宅。仲兄宅在何家坟后，肘腋皆窭贫居也。予独留后以观动静。俄而伯兄至，曰：中衢血溅矣。留此待□，予伯仲生死一处，亦可不恨。予遂奉先人神主，偕兄至仲兄宅。当是时，两兄、一弟、一嫂、一侄又一妇、一子、二外姨、一内弟，同避仲兄家。天渐暮，大兵杀人声已彻门外，因乘屋暂避；雨尤甚大，数人共拥一毡，丝发皆湿透。门外哀痛之声，悚耳慑魄。延至夜静，乃敢扳檐下屋，敲火炊食。城中四周火起，近者十余处、远者不计其数，赤光相映如霞电，■〈火辟〉烞声轰耳不绝；隐隐又闻击楚声，哀风凄切，惨不可状。饭熟，相顾惊忧，泪下不能下箸，亦不能设一谋。予妇取前金碎之，分为四，兄弟各藏其一，髻履衣带内皆有；妇又觅一破衲旧履，为分换讫，遂张目达旦。是夜也，有鸟在空中如笙篁声，又如小儿啼哭声，如在人首不远；询诸人，皆闻之。二十六日，顷之，火势稍息，天亦渐明；复乘高升屋躲避，已有十数人伏天沟内。忽东厢一人缘墙直上，一卒持刃随之，追如■〈耳〉飞。望见予众，随舍所追而奔予。予惶迫，即下窜；兄继之、弟又继之，走百余步而后止。自此，遂与妇子相失，不复知其生死矣。诸黠卒恐避匿者多，给众人以安民符节，不诛；匿者竞出从之。共集至五、六十，妇女参半。兄谓予曰：我落落四人，或遇悍卒，终不能免。不若投彼大群，势众则易避；即不幸亦生死相聚，不恨也。当是时，方寸已乱，更不知何为救生良策；共曰：唯唯。相与就之。领此者，三满卒也；搜予兄弟金皆尽，独遗予未搜。忽来妇人，内有呼予者；视之，乃余友朱书兄之二妾也。予急止之。二妾皆散发露肉，足深入泥中没胫。一妾犹抱一女，卒鞭而掷之泥中，旋即驱走。一卒提刀前导、一卒横槊后逐，一卒居中或左或右，以防逃逸。数十人如驱牛羊，稍不前，即加捶挞，或即杀之。诸妇女长索系颈，累累如贯珠；一步一跌，遍身泥土。满地皆婴儿，或衬马蹄、或籍人足，肝脑涂地，泣声盈野。行过一沟一池，堆尸贮积，手足相枕；血入水，碧赭化为五色，塘为之平。至一宅，乃廷尉永言姚公居也；从其后门直入，屋宇深邃，处处皆有积尸。予意此间，是我死所矣。乃委迤达前户，出街复至一宅，为西商乔承望之室，即三卒窠穴也。入门，已有一卒拘数少妇拣拾箱笼，彩缎如山。见三卒至，大笑；即驱予辈数十人至后厅。留诸妇置旁室中，列二方几、三衣匠，一中年妇人制衣。妇，本郡人，浓抹丽妆，鲜衣华饰；指挥言笑，欣然有得色。每遇好物，即向卒乞取；曲尽媚态，不以为耻。卒尝谓人曰：我辈征高丽，掳妇女数万人，无一失节者；何堂堂中国，无耻至此？呜呼！此中国之所以乱也。三卒将妇女尽解湿衣，自表至里、自顶至踵，并令制衣妇人相修短、量宽窄，易以鲜新。而诸妇女因威逼不已，遂至裸体不能掩盖，羞涩欲死者，又不待言也。换衣毕，乃拥诸妇女饮酒食肉，无所不为，不顾廉耻。一卒忽横刀跃起疾呼，向后曰：蛮子来！近前，数人已被缚，吾伯兄与焉。仲兄曰：势已至此，夫复何言！急持予手前，予弟亦随之。是时，被执男子共五十余人；提刀一呼，魂魄皆丧，无一人敢动者。予随伯兄出厅，见外面杀人，众皆次第待命。予初念亦甘就缚；忽心动，若有神助，潜身一遁，复至后厅，而五十余人不知也。厅后宅西房，尚存诸老妇，不能躲避；穿至后面，尽牧驼马，不能逾走，心愈急。遂俯就驼马腹下，历数驼马腹，匍匐而出；若惊驼马，稍一举足，即成泥矣。又历宅数层，皆无路出；惟旁有衖可通后门，而衖门已有长铁钉锢。予复由后衖至前，闻前堂杀人声，愈惶怖无策。回顾左侧，有厨中四人，盖亦被执治庖者。予求收入，使得参司火掌汲之役，幸或苟免。四人峻拒曰：我四人，点而役者也；使再点而增入，必疑有诈，祸必及我。予哀求不已；乃更大怒，欲执予赴外。予乃出，心益急，视阶前有架、架上有瓮，去屋不远，乃援架而上；手方及瓮，而身已倾仆，盖瓮中虚而用力猛故也。无可奈何，仍急趋旁衖门，两手捧锥，摇撼百度，终莫能动；击以石，则响达外庭，恐觉。不得已，又复摇撼，指破血流；锥忽动，尽力一拔，锥已在握，急掣门■〈户外及内〉—■〈户外及内〉木，槿也；濡雨而涨，其坚塞倍于锥。予迫甚，但力取■〈户外及内〉，■〈户外及内〉不能出而门枢忽折，扉倾垣颓，声如雷震。予急耸身飞越，亦不知力之何来也。疾趋后门出，即为城脚。时兵骑充斥，前进不能；即于乔宅左邻后门挨身而入。凡可避处皆有人，必不肯容。由后至前，凡五进，皆如是。直至大门，已临通衢；兵丁往来，络绎不绝，人以为危地而弃之。予乃急入，得一榻；榻颠有仰顶，因缘柱登之，屈身而匿。喘息方定，忽闻隔墙吾弟哀号声，又闻举刀砍击声；凡三击，遂寂然。少间，复闻仲兄哀恳曰：吾有金在家地窖中，放我取献。一击，复寂然。予时神已离舍，心若焚膏，眼枯无泪、肠结欲断，不复自主也。旋有卒，挟一妇人直入，欲宿此榻；妇不肯，强而后可。妇曰：此地近市，不可居。予几不免焉。顷之，卒仍挟妇人而去。室有仰屏，似席为之，不胜人；然缘之可以及梁。予以两手扳梁，行条而上，足托驼梁，下有席蔽，中黑如漆；仍有兵至，以矛上搠，知是空虚，料无人在上，予始得竟日未遇兵。然在下被刃者，又不知几何人。街前每数骑过，必有数十男妇哀号随其后。是日虽不雨，亦无日色，不知旦暮。久之，军骑稍疏，左右惟闻人声悲泣。思吾弟兄已伤其半，伯兄亦未卜存亡，予妇、予子不知何处；欲踪迹之，或得一见。乃附梁徐下，蹑足至前街。街中人首相枕籍，天暝莫辩为谁；俯尸遍呼，无应者。遥见南首数火炬蜂拥而来，予急避之；循郭走，城下积尸碍步，数跌复起。每有所惊，即仆地如僵尸。久之，得达小路；路人昏夜互触，相惊骇。大街上举火，照耀如白日。自酉至亥，方及兄家宅；门闭，不敢遽击。俄闻妇人声，知为吾嫂，始轻击；应门者，即予妇也。大兄已先返，吾妇子俱在。予与伯兄哭，然犹未敢遽告仲兄、季弟之被杀也。嫂询予，予依违答之。予询妇何以免？妇曰：方卒之追逐也，子先奔，众人继之，独遗我。我抱彭儿投屋下，不得死；吾妹踢伤足，亦卧焉。卒持我二人至一室，屋中男妇几十人皆鱼贯而缚；因嘱我于诸妇曰：看守之，无使逸去！本持刀出。又一卒入，劫吾妹去。久之不见卒至，遂给诸妇出。出即遇洪妪，相携至故处，故幸免——洪妪者，仲兄内亲也。妇询予，告以故，哭泣良久。洪携宿饭相劝，哽咽不可下。外复四面火起，倍于昨夕。潜出户外，田中横尸交砌，喘息犹存。遥见何家坟中树木阴森，哭音成籁；或父呼子、或夫觅妻，呱呱之声，草畔溪间，比比皆是，惨不忍闻。回至洪宅，妇欲觅死；予竟夜与语，不得间，东方白矣。<br>　　二十七日，问妇避所；引予委曲至一柩后，古瓦荒砖，久绝人迹。予蹲乱草中，置予于柩上，覆以芦席。妇偻居其前，我曲附于后；扬首则顶露，展足则踵见；微出气息，拘手足为一裹。魂少定而杀声逼至，刀环响处，怆呼乱起；齐声乞命者或数十人，或百余人。遇一卒至，南人不论多寡，皆垂首匐伏，引颈受刃，无一敢逃者。至于纷纷子女，百口交啼，哀鸣动地，更无论矣。至午后，积尸如山，杀掠更甚。至晚，予等逡巡走出。彭儿酣卧柩上，自朝至暮不啼不言，亦不欲食。渴时欲饮，取片瓦掬沟水润之，仍睡去。呼醒，抱与俱去。洪妪亦至，知吾嫂又被劫去、吾侄在襁褓竟失所在。呜呼！痛哉！甫二日，而兄嫂、弟侄已亡其四矣，相与觅旧中余米，不得；遂与伯兄枕股，忍饥达旦。是夜，予妇觅死几毙，赖洪妪救免。<br>　　二十八日，予谓伯兄曰：今日不知谁死；吾兄幸无恙，乞与彭儿保其残喘！兄垂泪慰勉，遂别逃他处。洪妪谓予妇曰：我昨匿柩中，终日贴然；当与子易而避之。妇坚不欲，仍到柩后同匿焉。未几，数足入，破柩劫妪去，捶击百端，卒不供出一人；予甚德之。少间，兵来益多，及予避所者前后接踵；然或一至屋后，望见柩而去。忽有十数卒哃喝而来，其势甚凶。俄见一人至柩前，以长竿搠予足；予惊而出，乃扬人为彼向导者，面则熟而忘其姓。予向之乞怜；彼且索金，以金始释予；尚曰：便宜尔妇！出语诸卒曰：姑舍是。诸卒乃散去。喘惊未定，忽一红衣少年掺长刃直抵予所，举锋相向；献以金，复索予妇。妇时孕九月矣，死伏地不起；予给之曰：妇孕多月，昨乘屋跌下，孕因之坏，万不能生，安能起来。红衣者不信，因启腹视之，兼验；以先涂之血裤，遂不顾。所掳一少妇、一幼女、一小儿，儿呼母索食，卒怒一击，脑碎而死；挟妇与女去。予谓此地人径巳熟，不能存身，当易善地处之；而妇坚欲自尽，予亦惶迫无主。两人遂出，并缢于梁；忽项下两绳一时俱断，并跌于地。未及起，而兵又盈门，直趋堂上，未暇过两廓。予与妇急趋门外逃，急奔一草房中，悉村间妇女；留妇而却予。予急奔南首草房中，其草堆积连屋；予登其巅，俯首伏匿，复以乱草覆其上，自以为无患矣。须臾卒至，一跃而上，以长矛搠其下。予从草间出，乞命，复献以金。卒搜草中，又得数人，皆有所献而免。兵既去，数人复入草间。予窥其中有方桌数张，外围皆草；其中廓然而虚，可容二、三十人。予强入，自谓得计。不意败垣，从半腰忽崩一穴，中外洞然，已为兵窥见；乃自穴外以长矛直刺，当其前者无不被大创，予股亦伤。前者尽为卒得，后者倒扒而出。予复至妇所，妇同众妇女皆伏卧积薪，以血涂体，粪缀其发，烟灰饰面，形如鬼蜮，鉴别以声。予乞众妇，得入草底；众妇女拥卧其上。予闭气不敢动，几闷绝；妇以竹筒授予，口衔其末，出其端于上，气方达，得不死。户外有卒，一时手杀二人；其事甚怪，笔不能载。草上诸妇，无不战栗。忽哀声大举，兵已入室；复大步而去，不旋顾。天渐黑，诸妇起；予始出草中，汗如雨。至夕，复同妇归洪宅，洪老、洪妪皆在。伯兄亦来，云是日被劫去负担，赏以千钱，仍付令旗放还。途中乱尸山叠，血流成渠。又闻有王姓将爷居昭阳李宅，以钱数万日给难民；其党杀人，往往劝阻，多所全活。是夜，悲咽之余，昏昏睡去。次日，则二十九日矣。<br>　　自二十五日起，至此已五日，私幸或可薄赦，又纷纷传洗城之说。城中残喘，冒死缒城逃去者大半。旧有官沟，壅塞不能通流；至是如坦途，然亦以此反罹其锋。城外亡命利城中所有，给伴夜入官沟盘诘，搜其金银，人莫敢谁何。予等念既不能越险以逃，而伯兄又为予，不忍独去。延至平旦，其念遂止。原避处知不可留，而予妇以孕故，屡屡获全，遂独以予匿池畔浮草中，妇与彭儿哀卧其上。有数卒至，为劫出者再；皆少献赂而去。继一狠卒来，鼠头鹰眼，其状甚恶，欲劫予妇。妇偃蹇以前，语告之，不听，逼使起立。妇旋转于地下，死不肯起。卒举刀背乱打，血溅衣裳，表里溃透。先是，妇戒予曰：倘遇不幸，吾必死；勿以夫妇故乞哀，并累子！故予远躲草中，为不知焉。予亦谓妇将死，而恶卒仍不舍，将妇发周数匝于臂，横拖而去。怒叱毒打，由田陌至深巷一箭多地，环曲以出大街；行数步，必击数下。突遇众骑中一人与卒满语数句，遂舍予妇去，始得匍匐而返；大哭一番，身无完肤矣。忽又烈火四起，何家坟前后多草房，燃则立刻成烬；其有寸壤隙地一、二漏网者，为火一逼，无不奔窜自出。出则遇害，百无一免。亦有闭户焚死者，由数口至百口；一室之中，正不知积骨多少。大约此际，无处可避，亦不能避；避则或一犯之，无金死，有金亦死。惟出露道旁与尸骸杂处，生死反未可知。予与妇子并往卧冢后，泥首涂足，殆无人形。火势愈炽，墓中乔木烧着，光如电灼、声如山崩，风势怒号，赤日惨淡为之无光。目前如见无数夜叉鬼，驱杀千百地狱人而驰逐之。惊悸之余，时作昏聩；盖已不知此身之在人世间矣。骤闻足声震响，惨呼震心；回看墙畔，则伯兄被获。遥见兄与卒相持，兄力大，撇而得脱；卒遂赶去—此卒即前日劫吾妇而复舍者也。半晌不至，予心摇摇。伯兄忽走来，赤身披发，为卒所逼，不得已向予索金救命。予仅存一锭，出以献卒；而卒怒甚，举刀击兄。兄辗转地上，流血满身。彭儿拉卒，涕泣求免（时年五岁）。卒以儿衣拭刀血再击，而兄将死矣。旋拉予发索金，刀背乱击不止。予诉金尽，曰：必欲金，即甘死；他物可也？卒牵予发至洪宅；予妇衣物置两瓮中，倒覆阶下，尽发以供其取。凡金珠之类无不要，而衣服择好者取焉。见儿项有银锁，将刀割去。去时，顾予曰：吾不杀你，自有人杀你也。知洗城之说已确，料必死矣。置儿于宅，同妇急出，看兄前后项皆被伤，深入寸许，胸前更烈。予二人扶至洪宅，问之，亦不知痛楚，忽聩、忽苏。安置毕，予夫妇复至坟处躲避。邻人俱卧乱草丛中，忽有作人语曰：明日洗城，必杀一尽；当弃汝归，与吾同走。妇亦劝余行。体余念伯兄垂危，岂忍舍去。又前所恃者，犹有余金；今金已尽，料不能生！一痛气绝，良久而苏，火亦渐灭。遥闻炮声三，往来兵丁渐少。予妇抱儿坐粪窖中，洪妪亦来相依。有数卒掳四、五个妇人，内二老者悲泣、两少者嘻笑自若。后有二卒追上夺妇，自相奋击；内一卒劝解，作满语。忽一卒将少妇负至树下对合，余二妇亦就被污。老妇哭泣求免。三少妇恬不为耻，十数人互为奸淫；仍交与追来二卒，而其中一少妇已不能起走矣。予认知为集氏之媳，其家平日所为应至此。惊骇之下，不胜叹息。忽见一人红衣佩剑、满帽皂靴，年不及三十，姿容俊爽；随从一人衣黄背甲，貌亦魁梧，后有扬州数人跟随。红衣人熟视予曰：视尔非若俦辈中，实言何等人？予念时有以措大获免者、有以措大而立毙者，不敢吐实，饰词以告。复指诸妇子，问是谁？具告以实。红衣人曰：明日王爷下令封刀，汝等得生矣。命随人付衣几件，又金一锭。问汝等几日不食？予答以五日矣。命跟我来。予与妇且信且疑，不敢不行。至一宅，所蓄甚富，鱼米充盈。向一妇人曰：你好好待此四人。与予别去。时已暮，予内弟被卒劫去，不知存亡，妇伤之特甚。少顷，老妪搬出鱼饭食。予宅去洪居不远，予取鱼饭食，吾兄喉不能咽，数箸而止。予为兄拭发洗血，心如刀割。是日，闻封刀之语，众心稍定。<br>　　明日，为五月朔日。势虽不甚烈，然未尝不杀掠；而富家大室，方且搜括无余。子女由十余岁起，抢掠殆无遗类。是日，兴平伯复入扬城，而寸丝、粒米尽入虎口矣。萧条残破，难以奉述。<br>　　初二日，传府道州县已置官吏，执安民牌遍谕百姓，毋得惊惧。又谕各寺院僧人，焚化积尸；而寺院中藏匿妇女亦复不少，亦有惊饿死者。查焚尸簿载数共八十余万，其落井投河、闭门焚缢者不与焉，被掳者不与焉。<br>　　初三日，出示放赈。偕洪妪至缺口关领米，米即督镇所储军粮如邱陵；数千担，片时荡然一空。往来负戴者俱焦头烂额，臂胫伤折，刀痕满面，如烛泪成行。抢米之际，虽亲友不相顾；强者去而复来，老弱被重伤者终日不能得升粒。<br>　　初四日，天晴。烈日蒸熏，尸气熏人。前后左右，处处焚烧，烟结如雾，腥闻数十里。是日，予烧棉及人骨成灰，以疗兄疮；垂泪颔之，不能出声。<br>　　初五日，幽僻之人，便稍出来；相逢各泪下，不能出一语。予等五人虽获稍苏，终不敢居宅内。晨起早食，即出处野畔；其妆饰一如前日。盖往来打粮者日不下数十辈，虽不掺戈而各制槌，恐吓诈人财物，每有毙于杖下者；一遇妇女，仍肆掳劫—初不知为清兵、为镇兵、为乱民也。是日，伯兄因伤重，刀疮迸裂而死。伤哉！痛不可言。忆予初被难时，兄弟、嫂侄、妇子亲共八人，今仅存三人；其内弟、外姨，又不复论。<br>　　自四月二十五日起、至五月五日止，共十日；其间皆身所亲历、目所亲睹，故漫记之如此。远处风闻者，不载也。后之人，幸生太平之世、享无事之乐、不自修省、一味暴殄者，阅此，当警惕焉耳。<br>　　时为督镇裁，惟有一死谢百姓。或曰：督镇大臣也；守官当死，督镇不当死也。夫不绝者，将幸免为守江计。死易，守江难；为真难者、舍其易者，贤矣。独计守江、守河、守广陵，一也。不能澄清河溯，则守白洋。白洋不守，则守广陵。广陵又不守，奔以守江南。无论关不能越、江不克渡，借使溃围得渡，犹之白洋、广陵也；亦何益哉！<br>　　扬城陷，每满卒一队，必有内地一、二奸宄为之引。故初但知杀人取财，后乃知某为显官、某为富户矣；初但知深入闺闼，后乃知破壁启窖，凡隐微之处无不至矣。大约维扬百姓，始终死于高杰。崇祯一变，即肆鸱张，假争镇之名，冒扶立之绩；虎踞邦沟，而关厢之地尽为瓦砾。及道邻（即督镇）为和事老人，专务调停。抑万里长城之靖南（指黄得功），而倚狼子野心之叛寇（指高杰），竟为安插旧城；遂使故巢春燕，化为别宅秋鸿，反客为主。十余年名重天下者，乃举动狼狈至此！迨乎睢阳计就、逆藩授首，元爵以乳臭厮养，谓宜图之反掌，释其兵力而乃锡封荫伯，豢数万豺狼于危城之中；遂使宿将因之越疆，敌国以为口实。手读定国先期之檄，未尝不切齿于当事者也。乃北骑渡河，不能用而故纵之，借以回北旆之指；致杰兵一出，如穷寇无归，沙洲一带悉遭狼噬，大桥东路杀人如麻。而纷纷愚氓，至反以围中为乐土；携老负幼，望危城如飞蛾之投火。自四月初八至二十四日入城者何止数万，尽驱之锋镝之下而歼焉；是谁为之咎者乎！乃城陷之后，复使其假虎威、啮残喘，真可谓天道无知矣。予友廷直郑子之言曰：坏西北之天下者，孙山谷也；壤东南之天下者，史道邻也。知言哉！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="如是我闻 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="如是我闻 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/明朝/" rel="tag"># 明朝</a>
+          
+            <a href="/tags/屠城/" rel="tag"># 屠城</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/02/Nginx配置HTTPS/" rel="next" title="Nginx配置HTTPS">
+                <i class="fa fa-chevron-left"></i> Nginx配置HTTPS
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/psb.gif" alt="如是我闻">
+            
+              <p class="site-author-name" itemprop="name">如是我闻</p>
+              <p class="site-description motion-element" itemprop="description">世界有多浮躁，我心就有多安静</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">135</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/thusihaveheard" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://instagram.com/rushiwowen3" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/amotee" target="_blank" title="Douban">
+                      
+                        <i class="fa fa-fw fa-spinner"></i>Douban</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:shuaichaogao@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yflegend.com/" title="博客" target="_blank">博客</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/" title="掘金" target="_blank">掘金</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.jianshu.com/" title="简书" target="_blank">简书</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/" title="知乎" target="_blank">知乎</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.amote.xin/" title="Amote" target="_blank">Amote</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">如是我闻</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+<!-- 在网页底部添加网站运行时间 -->
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("07/21/2018 00:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "Run for "+dnum+" Days ";
+        document.getElementById("times").innerHTML = hnum + " Hours " + mnum + " m " + snum + " s";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'eUdgt4vIERJUnvWDfaaO6jSx-gzGzoHsz',
+        appKey: 'OsJSwGWCvkBebqxGuOfdvDkC',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("ansHzsPux8cwT2p7SCp5Jxqu-gzGzoHsz", "65g8yYjE25BllOi2WoVNVL16");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

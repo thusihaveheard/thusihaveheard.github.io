@@ -9,7 +9,7 @@
         <category>古文</category>
       </categories>
       <tags>
-        <tag>明朝</tag>
+        <tag>明末</tag>
         <tag>屠城</tag>
       </tags>
   </entry>
@@ -1717,8 +1717,8 @@
         <category>生活</category>
       </categories>
       <tags>
-        <tag>佛</tag>
         <tag>生活</tag>
+        <tag>佛</tag>
       </tags>
   </entry>
   <entry>
@@ -1781,9 +1781,9 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
-        <tag>Devops</tag>
         <tag>Centos7</tag>
+        <tag>Devops</tag>
+        <tag>Docker</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1795,9 +1795,9 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
-        <tag>Devops</tag>
         <tag>Centos7</tag>
+        <tag>Devops</tag>
+        <tag>Docker</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1809,9 +1809,9 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
-        <tag>Devops</tag>
         <tag>Centos7</tag>
+        <tag>Devops</tag>
+        <tag>Docker</tag>
         <tag>Register</tag>
       </tags>
   </entry>

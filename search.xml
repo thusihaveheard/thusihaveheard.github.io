@@ -35,9 +35,9 @@
         <category>Nginx</category>
       </categories>
       <tags>
-        <tag>Nginx</tag>
         <tag>HTTPS</tag>
         <tag>网络</tag>
+        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
@@ -1795,9 +1795,9 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Centos7</tag>
         <tag>Docker</tag>
         <tag>Devops</tag>
+        <tag>Centos7</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1809,9 +1809,9 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Centos7</tag>
         <tag>Docker</tag>
         <tag>Devops</tag>
+        <tag>Centos7</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1823,9 +1823,9 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Centos7</tag>
         <tag>Docker</tag>
         <tag>Devops</tag>
+        <tag>Centos7</tag>
         <tag>Register</tag>
       </tags>
   </entry>

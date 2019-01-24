@@ -13,7 +13,7 @@
         <tag>曹植</tag>
         <tag>神话</tag>
         <tag>爱情</tag>
-        <tag>甄妃</tag>
+        <tag>宓妃</tag>
       </tags>
   </entry>
   <entry>
@@ -1841,8 +1841,8 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Centos7</tag>
         <tag>Docker</tag>
+        <tag>Centos7</tag>
         <tag>Devops</tag>
         <tag>kubernetes</tag>
       </tags>
@@ -1855,8 +1855,8 @@
         <category>kubernetes</category>
       </categories>
       <tags>
-        <tag>Centos7</tag>
         <tag>Docker</tag>
+        <tag>Centos7</tag>
         <tag>Devops</tag>
         <tag>kubernetes</tag>
       </tags>
@@ -1869,8 +1869,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Centos7</tag>
         <tag>Docker</tag>
+        <tag>Centos7</tag>
         <tag>Devops</tag>
         <tag>Register</tag>
       </tags>

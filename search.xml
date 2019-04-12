@@ -9,8 +9,8 @@
         <category>唐</category>
       </categories>
       <tags>
-        <tag>诗词</tag>
         <tag>唐</tag>
+        <tag>诗词</tag>
         <tag>刘希夷</tag>
       </tags>
   </entry>
@@ -69,8 +69,8 @@
         <category>唐</category>
       </categories>
       <tags>
-        <tag>诗词</tag>
         <tag>唐</tag>
+        <tag>诗词</tag>
         <tag>张若虚</tag>
       </tags>
   </entry>
@@ -1791,8 +1791,8 @@
         <category>生活</category>
       </categories>
       <tags>
-        <tag>佛</tag>
         <tag>生活</tag>
+        <tag>佛</tag>
       </tags>
   </entry>
   <entry>
@@ -1855,9 +1855,9 @@
         <category>kubernetes</category>
       </categories>
       <tags>
+        <tag>Devops</tag>
         <tag>Centos7</tag>
         <tag>Docker</tag>
-        <tag>Devops</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1869,9 +1869,9 @@
         <category>kubernetes</category>
       </categories>
       <tags>
+        <tag>Devops</tag>
         <tag>Centos7</tag>
         <tag>Docker</tag>
-        <tag>Devops</tag>
         <tag>kubernetes</tag>
       </tags>
   </entry>
@@ -1883,9 +1883,9 @@
         <category>Docker</category>
       </categories>
       <tags>
+        <tag>Devops</tag>
         <tag>Centos7</tag>
         <tag>Docker</tag>
-        <tag>Devops</tag>
         <tag>Register</tag>
       </tags>
   </entry>

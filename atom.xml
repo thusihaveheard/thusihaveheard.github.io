@@ -42,9 +42,9 @@
       <category term="唐" scheme="https://amote.xin/categories/%E8%AF%97%E8%AF%8D/%E5%94%90/"/>
     
     
-      <category term="诗词" scheme="https://amote.xin/tags/%E8%AF%97%E8%AF%8D/"/>
-    
       <category term="唐" scheme="https://amote.xin/tags/%E5%94%90/"/>
+    
+      <category term="诗词" scheme="https://amote.xin/tags/%E8%AF%97%E8%AF%8D/"/>
     
       <category term="刘希夷" scheme="https://amote.xin/tags/%E5%88%98%E5%B8%8C%E5%A4%B7/"/>
     
@@ -179,9 +179,9 @@
       <category term="唐" scheme="https://amote.xin/categories/%E8%AF%97%E8%AF%8D/%E5%94%90/"/>
     
     
-      <category term="诗词" scheme="https://amote.xin/tags/%E8%AF%97%E8%AF%8D/"/>
-    
       <category term="唐" scheme="https://amote.xin/tags/%E5%94%90/"/>
+    
+      <category term="诗词" scheme="https://amote.xin/tags/%E8%AF%97%E8%AF%8D/"/>
     
       <category term="张若虚" scheme="https://amote.xin/tags/%E5%BC%A0%E8%8B%A5%E8%99%9A/"/>
     
@@ -4192,9 +4192,9 @@
       <category term="生活" scheme="https://amote.xin/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="佛" scheme="https://amote.xin/tags/%E4%BD%9B/"/>
-    
       <category term="生活" scheme="https://amote.xin/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="佛" scheme="https://amote.xin/tags/%E4%BD%9B/"/>
     
   </entry>
   
@@ -4353,11 +4353,11 @@
       <category term="kubernetes" scheme="https://amote.xin/categories/kubernetes/"/>
     
     
+      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
+    
       <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
-    
-      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
       <category term="kubernetes" scheme="https://amote.xin/tags/kubernetes/"/>
     
@@ -4384,11 +4384,11 @@
       <category term="kubernetes" scheme="https://amote.xin/categories/kubernetes/"/>
     
     
+      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
+    
       <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
-    
-      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
       <category term="kubernetes" scheme="https://amote.xin/tags/kubernetes/"/>
     
@@ -4415,11 +4415,11 @@
       <category term="Docker" scheme="https://amote.xin/categories/Docker/"/>
     
     
+      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
+    
       <category term="Centos7" scheme="https://amote.xin/tags/Centos7/"/>
     
       <category term="Docker" scheme="https://amote.xin/tags/Docker/"/>
-    
-      <category term="Devops" scheme="https://amote.xin/tags/Devops/"/>
     
       <category term="Register" scheme="https://amote.xin/tags/Register/"/>
     
